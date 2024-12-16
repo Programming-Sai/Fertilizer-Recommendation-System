@@ -1,0 +1,81 @@
+.results {
+  padding: 100px 0;
+  min-height: 100vh;
+  background: linear-gradient(
+    135deg,
+    var(--light-green) 0%,
+    var(--background) 100%
+  );
+}
+
+.results h2 {
+  color: var(--text-dark);
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  font-weight: 800;
+  text-align: center;
+}
+
+.recommendation-card {
+  margin: 2rem auto;
+  max-width: 700px;
+  animation: slideIn 0.6s ease-out;
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(-40px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+.recommendation-card h3 {
+  color: var(--primary-green);
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.recommendation-details {
+  background: var(--gray-100);
+  padding: 1.5rem;
+  border-radius: 16px;
+  margin: 1.5rem 0;
+}
+
+.recommendation-details p {
+  color: var(--text-dark);
+  font-size: 1.125rem;
+  margin-bottom: 1rem;
+}
+
+.recommendation-details ul {
+  list-style: none;
+  margin: 1rem 0;
+}
+
+.recommendation-details li {
+  padding: 1rem;
+  background: white;
+  border-radius: 12px;
+  margin-bottom: 0.75rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.2s ease;
+}
+
+.recommendation-details li:hover {
+  transform: translateX(5px);
+}
+
+.download-section {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.download-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.125rem;
+}
