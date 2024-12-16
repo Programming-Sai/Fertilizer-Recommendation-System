@@ -1,9 +1,9 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Navbar from './components/Navbar';
-import Home from './pages/Home';
-import RecommendationForm from './pages/RecommendationForm';
-import Results from './pages/Results';
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import Home from "./pages/Home";
+import RecommendationForm from "./pages/RecommendationForm";
+import Results from "./pages/Results";
 
 function App() {
   return (
@@ -11,7 +11,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/recommend" element={<RecommendationForm />} />
+        <Route path="/predict" element={<RecommendationForm />} />
         <Route path="/results" element={<Results />} />
       </Routes>
     </Router>
