@@ -1,7 +1,8 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
+import { BASE_PATH } from "./BasePath";
 
 export default defineConfig({
   plugins: [react()],
-  base: "/Fertilizer-Recommendation-System/", // Replace with your repo name
+  base: `${BASE_PATH}/`,
 });

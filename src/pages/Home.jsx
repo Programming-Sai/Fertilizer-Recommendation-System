@@ -1,6 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import "./Home.css";
+import { BASE_PATH } from "../../BasePath";
 
 function Home() {
   const navigate = useNavigate();
@@ -18,7 +19,10 @@ function Home() {
           fertilizer waste.
         </p>
         <div className="cta-group">
-          <button className="start-button" onClick={() => navigate("/predict")}>
+          <button
+            className="start-button"
+            onClick={() => navigate(`${BASE_PATH}/predict`)}
+          >
             <span>Get Started</span>
             <svg
               width="20"

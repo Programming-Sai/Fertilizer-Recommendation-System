@@ -1,6 +1,7 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import "./Navbar.css";
+import { BASE_PATH } from "../../BasePath";
 
 function Navbar() {
   const location = useLocation();
@@ -12,9 +13,9 @@ function Navbar() {
         </Link>
         <div className="nav-links">
           <Link
-            to="/"
+            to={`${BASE_PATH}/`}
             className={`${
-              location.pathname === "/"
+              location.pathname === `${BASE_PATH}/`
                 ? "nav-link-active nav-link"
                 : "nav-link"
             }`}
@@ -22,9 +23,9 @@ function Navbar() {
             Home
           </Link>
           <Link
-            to="/about"
+            to={`${BASE_PATH}/about`}
             className={`${
-              location.pathname === "/about"
+              location.pathname === `${BASE_PATH}/about`
                 ? "nav-link-active nav-link"
                 : "nav-link"
             }`}
@@ -32,9 +33,9 @@ function Navbar() {
             About
           </Link>
           <Link
-            to="/contact"
+            to={`${BASE_PATH}/contact`}
             className={`${
-              location.pathname === "/contact"
+              location.pathname === `${BASE_PATH}/contact`
                 ? "nav-link-active nav-link"
                 : "nav-link"
             }`}
@@ -42,9 +43,9 @@ function Navbar() {
             Contact
           </Link>
           <Link
-            to="/predict"
+            to={`${BASE_PATH}/predict`}
             className={`${
-              location.pathname === "/predict"
+              location.pathname === `${BASE_PATH}/predict`
                 ? "nav-link-active nav-link"
                 : "nav-link"
             }`}

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./RecommendationForm.css";
+import { BASE_PATH } from "../../BasePath";
 
 function RecommendationForm() {
   const navigate = useNavigate();
@@ -17,7 +18,7 @@ function RecommendationForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    navigate("/results", { state: { formData } });
+    navigate(`${BASE_PATH}/results`, { state: { formData } });
   };
 
   return (

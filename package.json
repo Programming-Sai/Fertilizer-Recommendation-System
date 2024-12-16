@@ -8,7 +8,7 @@
     "build": "vite build",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist -b fertilizer-system-preview"
+    "deploy": "gh-pages -d dist -b fertilizer-system-preview -m \"${npm_config_message:-Updates}\""
   },
   "dependencies": {
     "react": "^18.2.0",
