@@ -1,21 +1,23 @@
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import './RecommendationForm.css';
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import "./RecommendationForm.css";
 
 function RecommendationForm() {
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
-    crop: '',
-    soilType: '',
+    crop: "",
+    soilType: "",
     soilPH: 7,
     temperature: 25,
     humidity: 50,
-    rainfall: 100
+    rainfall: 100,
   });
+
+  const [progress, setProgress] = useState(0);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    navigate('/results', { state: { formData } });
+    navigate("/results", { state: { formData } });
   };
 
   return (
@@ -24,11 +26,16 @@ function RecommendationForm() {
         <div className="form-container">
           <div className="form-header">
             <h1 className="form-title">Get Your Smart Recommendation</h1>
-            <p className="form-subtitle">Fill in your crop and soil details for a personalized analysis</p>
+            <p className="form-subtitle">
+              Fill in your crop and soil details for a personalized analysis
+            </p>
           </div>
 
           <div className="form-progress">
-            <div className="progress-line"></div>
+            <div className="progress-line">
+              <div style={{ "--progress": `${progress}%` }}></div>
+              {/* <div></div> */}
+            </div>
             <div className="progress-step">
               <div className="step-number">1</div>
               <div className="step-title">Crop Details</div>
@@ -51,9 +58,12 @@ function RecommendationForm() {
               </h3>
               <div className="form-control">
                 <label>Select Your Crop</label>
-                <select 
+                <select
                   value={formData.crop}
-                  onChange={(e) => setFormData({...formData, crop: e.target.value})}
+                  onChange={(e) => {
+                    setFormData({ ...formData, crop: e.target.value });
+                    setProgress(30);
+                  }}
                   required
                 >
                   <option value="">Choose a crop type</option>
@@ -74,9 +84,12 @@ function RecommendationForm() {
               </h3>
               <div className="form-control">
                 <label>Soil Type</label>
-                <select 
+                <select
                   value={formData.soilType}
-                  onChange={(e) => setFormData({...formData, soilType: e.target.value})}
+                  onChange={(e) => {
+                    setFormData({ ...formData, soilType: e.target.value });
+                    setProgress(60);
+                  }}
                   required
                 >
                   <option value="">Select soil type</option>
@@ -92,13 +105,16 @@ function RecommendationForm() {
                 <label>Soil pH Level</label>
                 <div className="range-slider">
                   <div className="range-value">{formData.soilPH}</div>
-                  <input 
+                  <input
                     type="range"
                     min="0"
                     max="14"
                     step="0.1"
                     value={formData.soilPH}
-                    onChange={(e) => setFormData({...formData, soilPH: e.target.value})}
+                    onChange={(e) => {
+                      setFormData({ ...formData, soilPH: e.target.value });
+                      setProgress(100);
+                    }}
                   />
                 </div>
               </div>
@@ -106,7 +122,16 @@ function RecommendationForm() {
 
             <button type="submit" className="submit-button">
               Generate Recommendation
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
                 <line x1="5" y1="12" x2="19" y2="12"></line>
                 <polyline points="12 5 19 12 12 19"></polyline>
               </svg>

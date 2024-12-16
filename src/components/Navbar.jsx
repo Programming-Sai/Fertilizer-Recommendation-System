@@ -4,17 +4,11 @@ import "./Navbar.css";
 
 function Navbar() {
   const location = useLocation();
-
-  // Define the styles for different pages
-  const isHome = location.pathname === "/";
-  const isAbout = location.pathname === "/about";
-  const is = location.pathname === "/about";
-
   return (
     <nav className="glass-nav">
       <div className="container nav-container">
         <Link to="/" className="nav-logo">
-          FertilizerGuide
+          🌱 FertilizerGuide
         </Link>
         <div className="nav-links">
           <Link
