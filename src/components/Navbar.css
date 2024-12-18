@@ -21,6 +21,7 @@
   font-size: 1.5rem;
   font-weight: bold;
   text-decoration: none;
+  white-space: nowrap;
 }
 
 .nav-links {
@@ -36,13 +37,46 @@
   opacity: 0.4;
 }
 
+.nav-link div {
+  border: 2px solid black;
+  width: 20px;
+  height: 20px;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  border-radius: 50%;
+  display: none;
+}
+
 .nav-link-active {
   border-bottom: 2px solid var(--primary-green);
   color: var(--primary-green);
   opacity: 1 !important;
 }
 
+.nav-link-active div {
+  background-color: var(--primary-green);
+  color: white;
+  border-color: var(--primary-green);
+}
+
+.nav-link:hover div {
+  border-color: var(--primary-green);
+}
+
 .nav-link:hover {
   color: var(--primary-green);
   opacity: 1 !important;
+}
+
+@media (max-width: 568px) {
+  .nav-link div {
+    display: flex;
+  }
+  .nav-link span {
+    display: none;
+  }
+  .nav-link-active {
+    border: none;
+  }
 }

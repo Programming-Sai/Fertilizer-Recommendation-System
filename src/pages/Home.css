@@ -208,4 +208,15 @@
     width: 100%;
     justify-content: center;
   }
+  .hero-shape {
+    width: 50%;
+    height: 40%;
+    bottom: 0%;
+    right: 2%;
+  }
+  .shape-2 {
+    top: 10%;
+    left: 2%;
+    height: 40%;
+  }
 }

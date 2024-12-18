@@ -2,7 +2,6 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import "./Home.css";
 import { BASE_PATH } from "../../BasePath";
-
 function Home() {
   const navigate = useNavigate();
 

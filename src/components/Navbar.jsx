@@ -2,6 +2,8 @@ import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import "./Navbar.css";
 import { BASE_PATH } from "../../BasePath";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faHome, faMagicWandSparkles } from "@fortawesome/free-solid-svg-icons";
 
 function Navbar() {
   const location = useLocation();
@@ -20,27 +22,10 @@ function Navbar() {
                 : "nav-link"
             }`}
           >
-            Home
-          </Link>
-          <Link
-            to={`${BASE_PATH}/about`}
-            className={`${
-              location.pathname === `${BASE_PATH}/about`
-                ? "nav-link-active nav-link"
-                : "nav-link"
-            }`}
-          >
-            About
-          </Link>
-          <Link
-            to={`${BASE_PATH}/contact`}
-            className={`${
-              location.pathname === `${BASE_PATH}/contact`
-                ? "nav-link-active nav-link"
-                : "nav-link"
-            }`}
-          >
-            Contact
+            <span>Home</span>
+            <div>
+              <FontAwesomeIcon icon={faHome} />
+            </div>
           </Link>
           <Link
             to={`${BASE_PATH}/predict`}
@@ -50,7 +35,10 @@ function Navbar() {
                 : "nav-link"
             }`}
           >
-            Predict
+            <span>Predict</span>
+            <div>
+              <FontAwesomeIcon icon={faMagicWandSparkles} />
+            </div>
           </Link>
         </div>
       </div>
