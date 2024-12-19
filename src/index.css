@@ -21,7 +21,7 @@
 }
 
 body {
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
   background-color: var(--background);
   color: var(--text-dark);
   line-height: 1.6;
@@ -70,7 +70,8 @@ body {
 }
 
 .form-control select,
-.form-control input {
+.form-control input,
+.form-control textarea {
   width: 100%;
   padding: 12px 16px;
   border: 2px solid var(--gray-200);
@@ -78,10 +79,12 @@ body {
   font-size: 1rem;
   transition: all 0.2s ease;
   background-color: white;
+  margin-bottom: 10px;
 }
 
 .form-control select:focus,
-.form-control input:focus {
+.form-control input:focus,
+.form-control textarea:focus {
   outline: none;
   border-color: var(--primary-green);
   box-shadow: 0 0 0 3px var(--light-green);
@@ -104,5 +107,11 @@ body {
 @media (max-width: 768px) {
   .container {
     padding: 0 16px;
+  }
+}
+
+@media (max-width: 568px) {
+  .container {
+    padding: 0 5px;
   }
 }

@@ -68,9 +68,11 @@
   position: relative;
   z-index: 2;
   transition: 0.5 ease;
+  cursor: pointer;
 }
 
-.step-number:hover {
+.step-number:hover,
+.step-number-active {
   background: var(--primary-green);
   color: white;
 }
@@ -191,12 +193,22 @@
   justify-content: center;
   gap: 0.5rem;
 }
-
+.submit-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
 .submit-button:hover {
   transform: translateY(-2px);
   box-shadow: 0 8px 15px rgba(34, 197, 94, 0.3);
 }
 
+.submit-button:first-of-type svg {
+  transform: rotate(180deg);
+}
+.submit-container {
+  display: flex;
+  gap: 1rem;
+}
 @media (max-width: 768px) {
   .form-container {
     margin: 0 1rem;
@@ -206,8 +218,4 @@
   .form-title {
     font-size: 2rem;
   }
-
-  /* .progress-step {
-    display: none;
-  } */
 }
