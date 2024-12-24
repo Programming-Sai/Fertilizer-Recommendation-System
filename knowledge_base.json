@@ -1,0 +1,49 @@
+{
+  "fertilizerRecommendations": {
+    "rules": [
+      {
+        "conditions": {
+          "cropType": "cereal",
+          "growthStage": "vegetative",
+          "yieldTarget": "low",
+          "fertilizerHistory": "low",
+          "waterRequirements": "high",
+          "temperature": "hot",
+          "humidity": "low",
+          "rainfall": "moderate",
+          "season": "spring",
+          "location": "tropical",
+          "pHLevel": "acidic",
+          "nitrogen": "low",
+          "phosphorous": "moderate",
+          "potassium": "low",
+          "soilType": "loamy",
+          "organicMatter": "moderate",
+          "soilMoisture": "high",
+          "electricalConductivity": "extreme",
+          "preferedFertilizerType": "NPK",
+          "preferedApplicationMethod": "broadcasting"
+        },
+        "recommendations": {
+          "fertilizerType": "NPK 10-20-20",
+          "NPK": {
+            "ratio": "1:2:2",
+            "values": {
+              "N": 50,
+              "P": 100,
+              "K": 100
+            },
+            "units": "kg/ha"
+          },
+          "applicationMode": "Drip Irrigation",
+          "frequency": "Every 4 weeks",
+          "reasoning": [
+            "Moderate nitrogen to maintain flowering phase.",
+            "High phosphorus to support flowering and fruiting.",
+            "Moderate potassium for plant stress resistance."
+          ]
+        }
+      }
+    ]
+  }
+}
