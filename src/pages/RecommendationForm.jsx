@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "./RecommendationForm.css";
 import { BASE_PATH } from "../../BasePath";
@@ -11,69 +11,73 @@ import useRecommendationForm from "../components/useRecommendationForm";
 function RecommendationForm() {
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
-    temperature: 0,
-    humidity: 0,
-    rainfall: 0,
-    season: "",
-    location: "",
+    temperature: null,
+    humidity: null,
+    rainfall: null,
+    season: null,
+    location: null,
 
-    pHLevel: 0,
-    nitrogen: 0,
-    phosphorous: 0,
-    potassium: 0,
-    soilType: "",
-    organicMatter: 0,
-    soilMoisture: 0,
-    electicalConductivity: 0,
+    pHLevel: 7,
+    nitrogen: null,
+    phosphorous: null,
+    potassium: null,
+    soilType: null,
+    organicMatter: null,
+    soilMoisture: null,
+    electricalConductivity: null,
 
-    cropType: "",
-    growthStage: "",
-    yieldTarget: 0,
-    fertilizerHistory: "",
-    waterRequirements: 0,
+    cropType: null,
+    growthStage: null,
+    yieldTarget: null,
+    fertilizerHistory: null,
+    waterRequirements: null,
 
-    preferedFertilizerType: "",
-    preferedApplicationMethod: "",
+    preferedFertilizerType: null,
+    preferedApplicationMethod: null,
   });
 
-  const [validFields, setValidFields] = useState(new Set());
+  const [filledForm, setFilledForm] = useState({
+    environmentalDataFilled: false,
+    cropDataFilled: false,
+    soilDataFilled: false,
+  });
+  const [progress, setProgress] = useState(0);
+
+  // Dynamically update progress when filledForm changes
+  useEffect(() => {
+    const totalFields = 3; // Total number of fields/categories
+    const filledFields = Object.values(filledForm).filter(Boolean).length; // Count how many are filled
+    setProgress(Math.min((filledFields / totalFields) * 100, 100)); // Update progress percentage
+  }, [filledForm]);
 
   const updateFields = (field) => {
     setFormData((prev) => {
-      const updatedFormData = { ...prev, ...field };
-
-      // Validate the current field
-      setValidFields((prevValidFields) => {
-        const updatedValidFields = new Set(prevValidFields);
-        Object.keys(field).forEach((key) => {
-          if (field[key]) {
-            // Field is valid, add it to the validFields set
-            updatedValidFields.add(key);
-          } else {
-            // Field is invalid, remove it from the validFields set
-            updatedValidFields.delete(key);
-          }
-        });
-        return updatedValidFields;
-      });
-
-      return updatedFormData;
-    });
-
-    // Calculate progress based on the number of valid fields
-    setValidFields((prevValidFields) => {
-      setProgress((prevValidFields.size / 18) * 100);
-      return prevValidFields; // Ensure this does not modify the set
+      return { ...prev, ...field };
     });
   };
 
-  const { steps, currentStep, step, next, prev, progress, goto, setProgress } =
-    useRecommendationForm([
-      <EnvironmentalData {...formData} updateFields={updateFields} />,
-      <CropData {...formData} updateFields={updateFields} />,
-      <SoilData {...formData} updateFields={updateFields} />,
-      <FarmersInput {...formData} updateFields={updateFields} />,
-    ]);
+  const { steps, currentStep, step, next, prev, goto } = useRecommendationForm([
+    <EnvironmentalData
+      {...formData}
+      updateFields={updateFields}
+      setFilledForm={setFilledForm}
+    />,
+    <CropData
+      {...formData}
+      updateFields={updateFields}
+      setFilledForm={setFilledForm}
+    />,
+    <SoilData
+      {...formData}
+      updateFields={updateFields}
+      setFilledForm={setFilledForm}
+    />,
+    <FarmersInput
+      {...formData}
+      updateFields={updateFields}
+      setFilledForm={setFilledForm}
+    />,
+  ]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -81,6 +85,7 @@ function RecommendationForm() {
       ? navigate(`${BASE_PATH}/results`, { state: { formData } })
       : next();
   };
+
   return (
     <div className="recommendation-form">
       <div className="container">
@@ -99,20 +104,20 @@ function RecommendationForm() {
               <div
                 onClick={() => goto(0)}
                 className={
-                  progress >= 25
+                  filledForm.environmentalDataFilled
                     ? "step-number-active step-number"
                     : "step-number"
                 }
               >
                 1
               </div>
-              <div className="step-title">Environmental Details</div>
+              <div className="step-title">Ecological Details</div>
             </div>
             <div className="progress-step">
               <div
                 onClick={() => goto(1)}
                 className={
-                  progress >= 50
+                  filledForm.cropDataFilled
                     ? "step-number-active step-number"
                     : "step-number"
                 }
@@ -125,7 +130,7 @@ function RecommendationForm() {
               <div
                 onClick={() => goto(2)}
                 className={
-                  progress >= 100
+                  filledForm.soilDataFilled
                     ? "step-number-active step-number"
                     : "step-number"
                 }

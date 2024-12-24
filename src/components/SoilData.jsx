@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 const SoilData = ({
   pHLevel,
@@ -10,12 +10,49 @@ const SoilData = ({
   soilMoisture,
   electicalConductivity,
   updateFields,
+  setFilledForm,
 }) => {
+  useEffect(() => {
+    setFilledForm((prev) => ({
+      ...prev,
+      soilDataFilled:
+        pHLevel &&
+        nitrogen &&
+        nitrogen >= 0 &&
+        nitrogen <= 200 &&
+        phosphorous &&
+        phosphorous >= 0 &&
+        phosphorous <= 50 &&
+        potassium &&
+        potassium >= 0 &&
+        potassium <= 400 &&
+        soilType &&
+        organicMatter &&
+        organicMatter >= 0 &&
+        organicMatter <= 10 &&
+        soilMoisture &&
+        soilMoisture >= 0 &&
+        soilMoisture <= 100 &&
+        electicalConductivity &&
+        electicalConductivity >= 0 &&
+        electicalConductivity <= 4,
+    }));
+  }, [
+    pHLevel,
+    nitrogen,
+    phosphorous,
+    potassium,
+    soilType,
+    organicMatter,
+    soilMoisture,
+    electicalConductivity,
+    setFilledForm,
+  ]);
   return (
     <div>
       <h3>
         <span>🌱</span>
-        Soil Data
+        Soil Analysis
       </h3>
       <div className="form-control">
         <label>Soil Type</label>
@@ -31,6 +68,8 @@ const SoilData = ({
           <option value="loamy">Loamy Soil</option>
           <option value="silt">Silty Soil</option>
           <option value="peat">Peat Soil</option>
+          <option value="saline">Salty Soil</option>
+          <option value="chalky">Chalky Soil</option>
         </select>
 
         <label>Soil pH Level</label>
@@ -53,7 +92,7 @@ const SoilData = ({
           onChange={(e) => updateFields({ nitrogen: e.target.value })}
           className="input"
           type="number"
-          max={37}
+          max={200}
           min={0}
           placeholder="Nitrogen Content"
         />
@@ -65,7 +104,7 @@ const SoilData = ({
           value={phosphorous}
           onChange={(e) => updateFields({ phosphorous: e.target.value })}
           type="number"
-          max={37}
+          max={50}
           min={0}
           placeholder="Phosphorous Content"
         />
@@ -77,7 +116,7 @@ const SoilData = ({
           onChange={(e) => updateFields({ potassium: e.target.value })}
           className="input"
           type="number"
-          max={37}
+          max={400}
           min={0}
           placeholder="Potassium Content"
         />
@@ -89,7 +128,7 @@ const SoilData = ({
           value={soilMoisture}
           onChange={(e) => updateFields({ soilMoisture: e.target.value })}
           type="number"
-          max={37}
+          max={100}
           min={0}
           placeholder="Soil Moisture"
         />
@@ -102,7 +141,7 @@ const SoilData = ({
           }
           className="input"
           type="number"
-          max={37}
+          max={4}
           min={0}
           placeholder="Electrical Conductivity (EC)"
           step={0.1}
@@ -114,7 +153,7 @@ const SoilData = ({
           onChange={(e) => updateFields({ organicMatter: e.target.value })}
           className="input"
           type="number"
-          max={37}
+          max={10}
           min={0}
           placeholder="Organic Matter (%)"
           step={0.1}

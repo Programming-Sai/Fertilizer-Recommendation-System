@@ -219,3 +219,34 @@
     font-size: 2rem;
   }
 }
+
+@media (max-width: 568px) {
+  .form-container {
+    padding: 0.7rem;
+  }
+  .form-group {
+    padding: 0.7rem;
+  }
+  .form-group label,
+  .form-group input::placeholder,
+  .form-group input,
+  .form-group select {
+    font-size: 0.8rem !important;
+  }
+  .step-title {
+    font-size: 0.575rem;
+  }
+  .submit-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .submit-button {
+    margin: 0;
+    display: flex;
+    justify-content: flex-start;
+    font-size: 0.8rem;
+  }
+  .submit-button:last-child {
+    justify-content: flex-end;
+  }
+}

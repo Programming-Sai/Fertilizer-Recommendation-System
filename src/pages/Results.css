@@ -23,8 +23,14 @@
 }
 
 @keyframes slideIn {
-  from { opacity: 0; transform: translateX(-40px); }
-  to { opacity: 1; transform: translateX(0); }
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 .recommendation-card h3 {
@@ -78,4 +84,10 @@
   align-items: center;
   gap: 8px;
   font-size: 1.125rem;
+}
+
+@media (max-width: 568px) {
+  .results {
+    padding: 5rem 1rem;
+  }
 }

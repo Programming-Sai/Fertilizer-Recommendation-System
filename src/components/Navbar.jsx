@@ -10,7 +10,7 @@ function Navbar() {
   return (
     <nav className="glass-nav">
       <div className="container nav-container">
-        <Link to="/" className="nav-logo">
+        <Link to={`${BASE_PATH}/`} className="nav-logo">
           🌱 FertilizerGuide
         </Link>
         <div className="nav-links">
