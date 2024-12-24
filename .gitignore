@@ -1,3 +1,5 @@
 /node_modules
 /dist
 deploy.sh
+/data
+/python-kb-generator

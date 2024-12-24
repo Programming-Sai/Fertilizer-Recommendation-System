@@ -11,11 +11,6 @@ const useRecommendationForm = (steps) => {
     setCurrentStep((i) => Math.max(i - 1, 0));
   };
 
-  // Debugging the current step value
-  useEffect(() => {
-    console.log("Updated current step:", currentStep); // Confirming the update
-  }, [currentStep]);
-
   const goto = (number) => {
     setCurrentStep(number);
   };

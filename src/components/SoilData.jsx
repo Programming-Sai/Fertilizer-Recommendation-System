@@ -8,7 +8,7 @@ const SoilData = ({
   soilType,
   organicMatter,
   soilMoisture,
-  electicalConductivity,
+  electricalConductivity,
   updateFields,
   setFilledForm,
 }) => {
@@ -18,24 +18,12 @@ const SoilData = ({
       soilDataFilled:
         pHLevel &&
         nitrogen &&
-        nitrogen >= 0 &&
-        nitrogen <= 200 &&
         phosphorous &&
-        phosphorous >= 0 &&
-        phosphorous <= 50 &&
         potassium &&
-        potassium >= 0 &&
-        potassium <= 400 &&
         soilType &&
         organicMatter &&
-        organicMatter >= 0 &&
-        organicMatter <= 10 &&
         soilMoisture &&
-        soilMoisture >= 0 &&
-        soilMoisture <= 100 &&
-        electicalConductivity &&
-        electicalConductivity >= 0 &&
-        electicalConductivity <= 4,
+        electricalConductivity,
     }));
   }, [
     pHLevel,
@@ -45,13 +33,13 @@ const SoilData = ({
     soilType,
     organicMatter,
     soilMoisture,
-    electicalConductivity,
+    electricalConductivity,
     setFilledForm,
   ]);
   return (
     <div>
       <h3>
-        <span>🌱</span>
+        <span>🍂</span>
         Soil Analysis
       </h3>
       <div className="form-control">
@@ -73,91 +61,103 @@ const SoilData = ({
         </select>
 
         <label>Soil pH Level</label>
-        <div className="range-slider">
-          <div className="range-value">{pHLevel}</div>
-          <input
-            type="range"
-            value={pHLevel}
-            onChange={(e) => updateFields({ pHLevel: e.target.value })}
-            min="0"
-            max="14"
-            step="0.1"
-            required
-          />
-        </div>
-        <label>Nitrogen Content</label>
-        <input
+        <select
+          onChange={(e) => updateFields({ pHLevel: e.target.value })}
+          value={pHLevel}
           required
-          value={nitrogen}
+          autoFocus
+        >
+          <option value="">Select The pH Level Range</option>
+          <option value="acidic">Acidic (4 - 5)</option>
+          <option value="slightlyAcidic">Slightly Acidic (5 - 6)</option>
+          <option value="neutral">Neutral (6 - 7)</option>
+          <option value="slightlyAlkaline">Slightly Alkaline (7 - 8)</option>
+          <option value="alkaline">Alkaline (8+)</option>
+        </select>
+        <label>Nitrogen Content</label>
+        <select
           onChange={(e) => updateFields({ nitrogen: e.target.value })}
-          className="input"
-          type="number"
-          max={200}
-          min={0}
-          placeholder="Nitrogen Content"
-        />
+          value={nitrogen}
+          required
+          autoFocus
+        >
+          <option value="">Select Nitrogen Level</option>
+          <option value="low">Low (0 - 50 kg/ha)</option>
+          <option value="moderate">Moderate (50 - 100 kg/ha)</option>
+          <option value="high">High (100 - 150 kg/ha)</option>
+          <option value="veryHigh">Very High (150+ kg/ha)</option>
+        </select>
 
         <label>Phosphorous Content</label>
-        <input
-          required
-          className="input"
-          value={phosphorous}
+        <select
           onChange={(e) => updateFields({ phosphorous: e.target.value })}
-          type="number"
-          max={50}
-          min={0}
-          placeholder="Phosphorous Content"
-        />
+          value={phosphorous}
+          required
+          autoFocus
+        >
+          <option value="">Select Phosphorous Level</option>
+          <option value="low">Low (0 - 30 kg/ha)</option>
+          <option value="moderate">Moderate (30 - 60 kg/ha)</option>
+          <option value="high">High (60 - 100 kg/ha)</option>
+          <option value="veryHigh">Very High (100+ kg/ha)</option>
+        </select>
 
         <label>Potassium Content</label>
-        <input
-          required
-          value={potassium}
+        <select
           onChange={(e) => updateFields({ potassium: e.target.value })}
-          className="input"
-          type="number"
-          max={400}
-          min={0}
-          placeholder="Potassium Content"
-        />
+          value={potassium}
+          required
+          autoFocus
+        >
+          <option value="">Select Potassium Level</option>
+          <option value="low">Low (0 - 40 kg/ha)</option>
+          <option value="moderate">Moderate (40 - 80 kg/ha)</option>
+          <option value="high">High (80 - 120 kg/ha)</option>
+          <option value="veryHigh">Very High (120+ kg/ha)</option>
+        </select>
 
         <label>Soil Moisture</label>
-        <input
-          required
-          className="input"
-          value={soilMoisture}
+        <select
           onChange={(e) => updateFields({ soilMoisture: e.target.value })}
-          type="number"
-          max={100}
-          min={0}
-          placeholder="Soil Moisture"
-        />
+          value={soilMoisture}
+          required
+          autoFocus
+        >
+          <option value="">Select Soil Moisture Level</option>
+          <option value="low">Low (0 - 20%)</option>
+          <option value="moderate">Moderate (20 - 50%)</option>
+          <option value="high">High (50 - 80%)</option>
+          <option value="veryHigh">Very High (80+%)</option>
+        </select>
         <label>Electrical Conductivity (EC)</label>
-        <input
-          required
-          value={electicalConductivity}
+        <select
           onChange={(e) =>
-            updateFields({ electicalConductivity: e.target.value })
+            updateFields({ electricalConductivity: e.target.value })
           }
-          className="input"
-          type="number"
-          max={4}
-          min={0}
-          placeholder="Electrical Conductivity (EC)"
-          step={0.1}
-        />
-        <label>Organic Matter (%)</label>
-        <input
+          value={electricalConductivity}
           required
-          value={organicMatter}
+          autoFocus
+        >
+          <option value="">Select The Electrical Conductivity Range</option>
+          <option value="low">Low (0 - 1)</option>
+          <option value="moderate">Moderate (1 - 2)</option>
+          <option value="high">High (2 - 3)</option>
+          <option value="veryHigh">Very High (3 - 4)</option>
+          <option value="extreme">Extreme (4+)</option>
+        </select>
+        <label>Organic Matter (%)</label>
+        <select
           onChange={(e) => updateFields({ organicMatter: e.target.value })}
-          className="input"
-          type="number"
-          max={10}
-          min={0}
-          placeholder="Organic Matter (%)"
-          step={0.1}
-        />
+          value={organicMatter}
+          required
+          autoFocus
+        >
+          <option value="">Select Organic Matter Level</option>
+          <option value="low">Low (0 - 2%)</option>
+          <option value="moderate">Moderate (2 - 5%)</option>
+          <option value="high">High (5 - 10%)</option>
+          <option value="veryHigh">Very High (10+%)</option>
+        </select>
       </div>
     </div>
   );

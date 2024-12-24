@@ -8,7 +8,9 @@ function Home() {
   return (
     <div className="home">
       <div className="hero-particles"></div>
-      <div className="hero-shape"></div>
+      <div className="hero-shape-1" />
+      <div className="hero-shape-2" />
+      {/* <div className="hero-shape shape-2"></div> */}
       <div className="home-content">
         <div className="hero-badge">🌱 Smart Agriculture Solutions</div>
         <h1 className="home-title">Optimize Your Crop Yield with Precision</h1>
@@ -39,7 +41,6 @@ function Home() {
           </button>
           <button className="learn-more">Learn More</button>
         </div>
-        <div className="hero-shape shape-2"></div>
       </div>
     </div>
   );

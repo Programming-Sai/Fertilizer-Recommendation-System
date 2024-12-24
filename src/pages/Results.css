@@ -86,8 +86,33 @@
   font-size: 1.125rem;
 }
 
+.fertilizer-type {
+  color: var(--primary-green);
+}
+.reason {
+  font-size: 1rem;
+  font-weight: initial;
+  margin-left: 2rem;
+  list-style: disc !important;
+}
+
+.recommendation-details ul {
+  list-style: disc !important;
+}
+.recommendation-details ul li span {
+  font-weight: initial;
+}
+
 @media (max-width: 568px) {
   .results {
     padding: 5rem 1rem;
+  }
+  .results p,
+  .recommendation-details ul li,
+  .download-section {
+    font-size: 0.8rem !important;
+  }
+  .reason {
+    margin-left: 0.1rem;
   }
 }

@@ -11,6 +11,12 @@ import useRecommendationForm from "../components/useRecommendationForm";
 function RecommendationForm() {
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
+    cropType: null,
+    growthStage: null,
+    yieldTarget: null,
+    fertilizerHistory: null,
+    waterRequirements: null,
+
     temperature: null,
     humidity: null,
     rainfall: null,
@@ -26,14 +32,29 @@ function RecommendationForm() {
     soilMoisture: null,
     electricalConductivity: null,
 
-    cropType: null,
-    growthStage: null,
-    yieldTarget: null,
-    fertilizerHistory: null,
-    waterRequirements: null,
-
     preferedFertilizerType: null,
     preferedApplicationMethod: null,
+
+    // cropType: "cereal",
+    // growthStage: "vegetative",
+    // yieldTarget: "low",
+    // fertilizerHistory: "low",
+    // waterRequirements: "high",
+    // temperature: "hot",
+    // humidity: "low",
+    // rainfall: "moderate",
+    // season: "spring",
+    // location: "tropical",
+    // pHLevel: "acidic",
+    // nitrogen: "low",
+    // phosphorous: "moderate",
+    // potassium: "low",
+    // soilType: "loamy",
+    // organicMatter: "moderate",
+    // soilMoisture: "high",
+    // electricalConductivity: "extreme",
+    // preferedFertilizerType: "NPK",
+    // preferedApplicationMethod: "broadcasting",
   });
 
   const [filledForm, setFilledForm] = useState({
@@ -57,12 +78,12 @@ function RecommendationForm() {
   };
 
   const { steps, currentStep, step, next, prev, goto } = useRecommendationForm([
-    <EnvironmentalData
+    <CropData
       {...formData}
       updateFields={updateFields}
       setFilledForm={setFilledForm}
     />,
-    <CropData
+    <EnvironmentalData
       {...formData}
       updateFields={updateFields}
       setFilledForm={setFilledForm}
@@ -104,27 +125,27 @@ function RecommendationForm() {
               <div
                 onClick={() => goto(0)}
                 className={
-                  filledForm.environmentalDataFilled
+                  filledForm.cropDataFilled
                     ? "step-number-active step-number"
                     : "step-number"
                 }
               >
                 1
               </div>
-              <div className="step-title">Ecological Details</div>
+              <div className="step-title">Crop Data</div>
             </div>
             <div className="progress-step">
               <div
                 onClick={() => goto(1)}
                 className={
-                  filledForm.cropDataFilled
+                  filledForm.environmentalDataFilled
                     ? "step-number-active step-number"
                     : "step-number"
                 }
               >
                 2
               </div>
-              <div className="step-title">Crop Data</div>
+              <div className="step-title">Ecological Details</div>
             </div>
             <div className="progress-step">
               <div

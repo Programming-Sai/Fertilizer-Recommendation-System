@@ -1,0 +1,105 @@
+{
+  "fertilizerRecommendations": {
+    "rules": [
+      {
+        "conditions": {
+          "cropType": [
+            "cereal",
+            "vegetable",
+            "legume",
+            "fruit",
+            "oilseed",
+            "tuber"
+          ],
+          "growthStage": [
+            "seedling",
+            "vegetative",
+            "flowering",
+            "fruiting",
+            "harvest"
+          ],
+          "yieldTarget": [
+            "low",
+            "moderate",
+            "high",
+            "slightlyHigh",
+            "veryHigh"
+          ],
+          "fertilizerHistory": ["none", "low", "moderate", "high"],
+          "waterRequirements": [
+            "low",
+            "moderate",
+            "high",
+            "veryHigh",
+            "variable"
+          ],
+          "temperature": ["cold", "cool", "moderate", "hot", "veryHot"],
+          "humidity": ["low", "moderate", "high", "veryHigh", "extreme"],
+          "rainfall": ["low", "moderate", "high", "veryHigh", "variable"],
+          "season": ["spring", "summer", "autumn", "winter", "wet", "dry"],
+          "location": [
+            "tropical",
+            "temperate",
+            "arid",
+            "mountainous",
+            "coastal"
+          ],
+          "pHLevel": [
+            "acidic",
+            "neutral",
+            "alkaline",
+            "slightlyAcidic",
+            "slightlyAlkaline"
+          ],
+          "nitrogen": ["low", "moderate", "high", "veryHigh"],
+          "phosphorous": ["low", "moderate", "high", "veryHigh"],
+          "potassium": ["low", "moderate", "high", "veryHigh"],
+          "soilType": [
+            "loamy",
+            "clay",
+            "sandy",
+            "peat",
+            "saline",
+            "chalky",
+            "silt"
+          ],
+          "organicMatter": ["low", "moderate", "high", "veryHigh"],
+          "soilMoisture": ["low", "moderate", "high", "veryHigh"],
+          "electricalConductivity": [
+            "low",
+            "moderate",
+            "high",
+            "veryHigh",
+            "extreme"
+          ],
+          "preferedFertilizerType": [
+            "NPK",
+            "compost",
+            "organic",
+            "slow-release"
+          ],
+          "preferedApplicationMethod": [
+            "broadcasting",
+            "fertigation",
+            "side-dressing"
+          ]
+        },
+        "recommendations": {
+          "fertilizerType": "",
+          "NPK": {
+            "ratio": "",
+            "values": {
+              "N": "",
+              "P": "",
+              "K": ""
+            },
+            "units": "kg/ha"
+          },
+          "applicationMode": "",
+          "frequency": "",
+          "reasoning": []
+        }
+      }
+    ]
+  }
+}

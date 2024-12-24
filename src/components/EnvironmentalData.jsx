@@ -13,54 +13,60 @@ const EnvironmentalData = ({
     setFilledForm((prev) => ({
       ...prev,
       environmentalDataFilled:
-        temperature &&
-        humidity >= 0 &&
-        humidity <= 100 &&
-        rainfall &&
-        season &&
-        location,
+        temperature && humidity && rainfall && season && location,
     }));
   }, [temperature, humidity, rainfall, season, location, setFilledForm]);
 
   return (
     <div>
       <h3>
-        <span>🌱</span>
+        <span>🌿</span>
         Ecological Details
       </h3>
       <div className="form-control">
         <label>Temperature</label>
-        <input
+        <select
           value={temperature}
           onChange={(e) => updateFields({ temperature: e.target.value })}
           required
-          autoFocus
-          className="input"
-          type="number"
-          placeholder="Temperature Degrees in Celcius"
-        />
+          name="temperature"
+        >
+          <option value="">Select The Temperature Range</option>
+          <option value="cold">Cold (0 - 10°C)</option>
+          <option value="cool">Cool (10 - 20°C)</option>
+          <option value="moderate">Moderate (20 - 30°C)</option>
+          <option value="hot">Hot (30 - 40°C)</option>
+          <option value="veryHot">Very Hot (40+°C)</option>
+        </select>
 
         <label>Rainfall</label>
-        <input
+        <select
           value={rainfall}
           onChange={(e) => updateFields({ rainfall: e.target.value })}
           required
-          className="input"
-          type="number"
-          placeholder="Rainfall in Milliliters"
-        />
+          name="rainfall"
+        >
+          <option value="">Select The Rainfall Range</option>
+          <option value="low">Low (0 - 500 mm)</option>
+          <option value="moderate">Moderate (500 - 1000 mm)</option>
+          <option value="high">High (1000 - 1500 mm)</option>
+          <option value="veryHigh">Very High (1500+ mm)</option>
+          <option value="variable">Variable (seasonally fluctuating)</option>
+        </select>
         <label>Humidity</label>
-        <input
+        <select
           value={humidity}
           onChange={(e) => updateFields({ humidity: e.target.value })}
           required
-          className="input"
-          type="number"
-          max={100}
-          min={0}
-          placeholder="Humidity (%)"
-        />
-
+          name="humidity"
+        >
+          <option value="">Select The Humidity Range</option>
+          <option value="low">Low (0 - 20%)</option>
+          <option value="moderate">Moderate (20 - 40%)</option>
+          <option value="high">High (40 - 60%)</option>
+          <option value="veryHigh">Very High (60 - 80%)</option>
+          <option value="extreme">Extreme (80+%)</option>
+        </select>
         <label>Season</label>
         <select
           value={season}

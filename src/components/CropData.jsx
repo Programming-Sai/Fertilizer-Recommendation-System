@@ -15,10 +15,8 @@ const CropData = ({
       cropDataFilled:
         cropType &&
         growthStage &&
-        yieldTarget >= 0 &&
         yieldTarget &&
         fertilizerHistory &&
-        waterRequirements >= 0 &&
         waterRequirements,
     }));
   }, [
@@ -70,30 +68,36 @@ const CropData = ({
           <option value="vegetative">Vegetative</option>
           <option value="flowering">Flowering</option>
           <option value="fruiting">Fruiting</option>
-          <option value="harvest-ready">Harvest Ready</option>
+          <option value="harvest">Harvest Ready</option>
         </select>
 
         <label>Yield Target (kg/ha)</label>
-        <input
-          value={yieldTarget}
+        <select
           onChange={(e) => updateFields({ yieldTarget: e.target.value })}
+          value={yieldTarget}
           required
-          className="input"
-          type="number"
-          min={0}
-          placeholder="Yield Target (kg/ha)"
-        />
+        >
+          <option value="">Select The Yield Target Range</option>
+          <option value="low">Low (0 - 5)</option>
+          <option value="moderate">Moderate (5 - 10)</option>
+          <option value="high">High (10 - 15)</option>
+          <option value="slightlyHigh">Slightly High (15 - 20)</option>
+          <option value="veryHigh">Very High (20+)</option>
+        </select>
 
         <label>Water Requirements</label>
-        <input
-          required
-          value={waterRequirements}
+        <select
           onChange={(e) => updateFields({ waterRequirements: e.target.value })}
-          className="input"
-          type="number"
-          min={0}
-          placeholder="Water Requirements"
-        />
+          value={waterRequirements}
+          required
+        >
+          <option value="">Choose a water requirement level</option>
+          <option value="low">Low</option>
+          <option value="moderate">Moderate</option>
+          <option value="high">High</option>
+          <option value="veryHigh">Very High</option>
+          <option value="variable">Variable</option>
+        </select>
         <label>Fertilizer History</label>
         <select
           onChange={(e) => updateFields({ fertilizerHistory: e.target.value })}
