@@ -52,7 +52,7 @@ The expert system uses a simple rule-based inference engine to suggest optimal f
 3. Run the app locally:
 
    ```bash
-   npm start
+   npm run dev
    ```
 
    The app should now be available at `http://localhost:3000`.
@@ -66,46 +66,40 @@ The expert system uses a simple rule-based inference engine to suggest optimal f
    - **JSON**: The user can download the recommendation data in JSON format for further analysis or record-keeping.
    - **PDF**: The system generates a neatly formatted PDF containing the recommendations for printing.
 
+Got it! Here's an updated section that focuses on contributors adding a comprehensive knowledge base:
+
+---
+
 ## Contributing
 
-We welcome contributors to help improve and expand the system. Here’s how you can contribute:
+We welcome contributors to help enhance the system. Here's how you can contribute:
 
 1. **Fork the repository** and create your branch:
 
    ```bash
-   git checkout -b feature-name
+   git checkout -b add-knowledge-base
    ```
 
-2. **Make changes** and ensure everything is well-documented and tested.
+2. **Expand the knowledge base** by adding more rules, facts, or fertilizer recommendations based on different crop types and soil conditions. Ensure that the knowledge base is well-documented for easy understanding. (basically try and add as many combinations of the options in each field in the Knowledge base skeleton)
 
 3. **Commit your changes**:
 
    ```bash
-   git commit -m "Add feature"
+   git commit -m "Expand knowledge base with new fertilizer recommendations"
    ```
 
 4. **Push to your branch**:
 
    ```bash
-   git push origin feature-name
+   git push origin add-knowledge-base
    ```
 
 5. **Open a pull request** to merge your changes into the `main` branch.
 
 ## Expected Contributions
 
-- Expanding the inference engine logic for more advanced recommendation systems.
-- Improving UI/UX for a better user experience, especially on mobile.
-- Integrating additional data sources for enhanced soil and crop analysis.
-- Adding unit and integration tests to ensure robustness.
-- Enhancing PDF generation capabilities (e.g., adding charts or images).
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Contact
-
-For any questions or suggestions, feel free to reach out to the repository owner at [contact-email@example.com](mailto:contact-email@example.com).
+- Expanding the knowledge base by adding new fertilizer recommendations for a variety of crops and soil conditions.
+- Updating existing rules with more detailed and accurate information.
+- Ensuring all additions are well-documented for future contributors.
 
 ---
