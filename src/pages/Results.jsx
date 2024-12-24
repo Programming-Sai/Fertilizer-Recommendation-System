@@ -167,11 +167,12 @@ function Results() {
                 <div className="reasoning">
                   <h4>Why This Recommendation?</h4>
                   <ul>
-                    {recommendations?.reasoning.map((i, idx) => (
-                      <li key={idx} className="reason">
-                        {isPdf ? i : `🌳 ${i}`}
-                      </li>
-                    ))}
+                    {recommendations?.reasoning &&
+                      recommendations?.reasoning.map((i, idx) => (
+                        <li key={idx} className="reason">
+                          {isPdf ? i : `🌳 ${i}`}
+                        </li>
+                      ))}
                   </ul>
                 </div>
               </li>

@@ -39,5 +39,22 @@ export default async function inferRecommendations(inputs) {
     }
   }
 
-  return { error: "No matching recommendation found." };
+  // If no match is found, return the default structure
+  return {
+    recommendations: {
+      fertilizerType: "",
+      NPK: {
+        ratio: "",
+        values: {
+          N: "",
+          P: "",
+          K: "",
+        },
+        units: "kg/ha",
+      },
+      applicationMode: "",
+      frequency: "",
+      reasoning: [],
+    },
+  };
 }
