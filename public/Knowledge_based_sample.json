@@ -1,39 +1,4524 @@
 {
-    "knowledgeBase": {
-      "fertilizerRecommendations": {
-        "rules": [
-          {
-            "conditions": {
-              "cropType": "",
-              "growthStage": "",
-              "yieldTarget": {},
-              "nitrogen": {},
-              "phosphorous": {},
-              "potassium": {},
-              "pHLevel": {}
+  "fertilizerRecommendations": {
+    "rules": [
+      {
+        "conditions": {
+          "cropType": "cereal",
+          "growthStage": "seedling",
+          "yieldTarget": "low",
+          "fertilizerHistory": "none",
+          "waterRequirements": "low",
+          "temperature": "cold",
+          "humidity": "low",
+          "rainfall": "low",
+          "season": "spring",
+          "location": "tropical",
+          "pHLevel": "neutral",
+          "nitrogen": "low",
+          "phosphorous": "low",
+          "potassium": "low",
+          "soilType": "loamy",
+          "organicMatter": "low",
+          "soilMoisture": "low",
+          "electricalConductivity": "low",
+          "preferedFertilizerType": "NPK",
+          "preferedApplicationMethod": "broadcasting"
+        },
+        "recommendations": {
+          "fertilizerType": "NPK",
+          "NPK": {
+            "ratio": "10-20-10",
+            "values": {
+              "N": "10",
+              "P": "20",
+              "K": "10"
             },
-            "recommendations": {
-              "fertilizerType": "NPK 10-20-10",
-              "NPK": {
-                "ratio": "1:2:1",
+            "units": "kg/ha"
+          },
+          "applicationMode": "broadcasting",
+          "frequency": "once a month",
+          "reasoning": ["Low nitrogen levels require NPK fertilization."]
+        }
+      },
+      {
+        "conditions": {
+          "cropType": "vegetable",
+          "growthStage": "flowering",
+          "yieldTarget": "high",
+          "fertilizerHistory": "low",
+          "waterRequirements": "high",
+          "temperature": "moderate",
+          "humidity": "moderate",
+          "rainfall": "moderate",
+          "season": "summer",
+          "location": "temperate",
+          "pHLevel": "neutral",
+          "nitrogen": "high",
+          "phosphorous": "moderate",
+          "potassium": "moderate",
+          "soilType": "sandy",
+          "organicMatter": "moderate",
+          "soilMoisture": "moderate",
+          "electricalConductivity": "moderate",
+          "preferedFertilizerType": "organic",
+          "preferedApplicationMethod": "fertigation"
+        },
+        "recommendations": {
+          "fertilizerType": "organic",
+          "NPK": {
+            "ratio": "8-4-8",
+            "values": {
+              "N": "8",
+              "P": "4",
+              "K": "8"
+            },
+            "units": "kg/ha"
+          },
+          "applicationMode": "fertigation",
+          "frequency": "every two weeks",
+          "reasoning": ["High nitrogen demand in flowering stage."]
+        }
+      },
+      {
+        "conditions": {
+          "cropType": "fruit",
+          "growthStage": "fruiting",
+          "yieldTarget": "veryHigh",
+          "fertilizerHistory": "moderate",
+          "waterRequirements": "variable",
+          "temperature": "hot",
+          "humidity": "high",
+          "rainfall": "high",
+          "season": "autumn",
+          "location": "coastal",
+          "pHLevel": "slightlyAlkaline",
+          "nitrogen": "moderate",
+          "phosphorous": "high",
+          "potassium": "veryHigh",
+          "soilType": "loamy",
+          "organicMatter": "high",
+          "soilMoisture": "high",
+          "electricalConductivity": "high",
+          "preferedFertilizerType": "slow-release",
+          "preferedApplicationMethod": "side-dressing"
+        },
+        "recommendations": {
+          "fertilizerType": "slow-release",
+          "NPK": {
+            "ratio": "6-10-15",
+            "values": {
+              "N": "6",
+              "P": "10",
+              "K": "15"
+            },
+            "units": "kg/ha"
+          },
+          "applicationMode": "side-dressing",
+          "frequency": "monthly",
+          "reasoning": [
+            "High potassium demand in fruiting stage.",
+            "Slow-release fertilizer supports continuous growth."
+          ]
+        }
+      },
+      {
+        "conditions": {
+          "cropType": "legume",
+          "growthStage": "vegetative",
+          "yieldTarget": "moderate",
+          "fertilizerHistory": "high",
+          "waterRequirements": "low",
+          "temperature": "cool",
+          "humidity": "moderate",
+          "rainfall": "low",
+          "season": "dry",
+          "location": "arid",
+          "pHLevel": "alkaline",
+          "nitrogen": "low",
+          "phosphorous": "moderate",
+          "potassium": "moderate",
+          "soilType": "chalky",
+          "organicMatter": "moderate",
+          "soilMoisture": "low",
+          "electricalConductivity": "low",
+          "preferedFertilizerType": "compost",
+          "preferedApplicationMethod": "broadcasting"
+        },
+        "recommendations": {
+          "fertilizerType": "compost",
+          "NPK": {
+            "ratio": "4-6-4",
+            "values": {
+              "N": "4",
+              "P": "6",
+              "K": "4"
+            },
+            "units": "kg/ha"
+          },
+          "applicationMode": "broadcasting",
+          "frequency": "every two months",
+          "reasoning": ["Compost enriches nitrogen-poor alkaline soils."]
+        }
+      },
+      {
+        "conditions": {
+          "cropType": "cereal",
+          "growthStage": "seedling",
+          "yieldTarget": "low",
+          "fertilizerHistory": "none",
+          "waterRequirements": "low",
+          "temperature": "cold",
+          "humidity": "low",
+          "rainfall": "low",
+          "season": "spring",
+          "location": "tropical",
+          "pHLevel": "acidic",
+          "nitrogen": "low",
+          "phosphorous": "low",
+          "potassium": "low",
+          "soilType": "loamy",
+          "organicMatter": "low",
+          "soilMoisture": "low",
+          "electricalConductivity": "low",
+          "preferedFertilizerType": "NPK",
+          "preferedApplicationMethod": "broadcasting"
+        },
+        "recommendations": {
+          "fertilizerType": "NPK",
+          "NPK": {
+            "ratio": "12-24-12",
+            "values": {
+              "N": "12",
+              "P": "24",
+              "K": "12"
+            },
+            "units": "kg/ha"
+          },
+          "applicationMode": "broadcasting",
+          "frequency": "once at planting",
+          "reasoning": [
+            "Seedling growth in cereals requires higher phosphorous for root development.",
+            "Low nitrogen levels indicate the need for a balanced NPK fertilizer.",
+            "Broadcasting is effective for early-stage cereal growth in loamy soils."
+          ]
+        }
+      },
+      {
+        "conditions": {
+          "cropType": "cereal",
+          "growthStage": "seedling",
+          "yieldTarget": "low",
+          "fertilizerHistory": "none",
+          "waterRequirements": "low",
+          "temperature": "cold",
+          "humidity": "low",
+          "rainfall": "low",
+          "season": "spring",
+          "location": "tropical",
+          "pHLevel": "acidic",
+          "nitrogen": "low",
+          "phosphorous": "low",
+          "potassium": "low",
+          "soilType": "loamy",
+          "organicMatter": "low",
+          "soilMoisture": "low",
+          "electricalConductivity": "low",
+          "preferedFertilizerType": "NPK",
+          "preferedApplicationMethod": "fertigation"
+        },
+        "recommendations": {
+          "fertilizerType": "NPK",
+          "NPK": {
+            "ratio": "10-20-10",
+            "values": {
+              "N": "10",
+              "P": "20",
+              "K": "10"
+            },
+            "units": "kg/ha"
+          },
+          "applicationMode": "fertigation",
+          "frequency": "once at planting, then biweekly",
+          "reasoning": [
+            "Seedling stage requires high phosphorous for root development.",
+            "Low nitrogen and potassium levels are balanced with a 10-20-10 ratio.",
+            "Fertigation ensures precise delivery of nutrients in loamy soils with low moisture.",
+            "Acidic soils benefit from controlled nutrient distribution via fertigation."
+          ]
+        }
+      },
+      {
+        "conditions": {
+          "cropType": "cereal",
+          "growthStage": "seedling",
+          "yieldTarget": "low",
+          "fertilizerHistory": "none",
+          "waterRequirements": "low",
+          "temperature": "cold",
+          "humidity": "low",
+          "rainfall": "low",
+          "season": "spring",
+          "location": "tropical",
+          "pHLevel": "acidic",
+          "nitrogen": "low",
+          "phosphorous": "low",
+          "potassium": "low",
+          "soilType": "loamy",
+          "organicMatter": "low",
+          "soilMoisture": "low",
+          "electricalConductivity": "low",
+          "preferedFertilizerType": "NPK",
+          "preferedApplicationMethod": "side-dressing"
+        },
+        "recommendations": {
+          "fertilizerType": "NPK",
+          "NPK": {
+            "ratio": "15-15-15",
+            "values": {
+              "N": "15",
+              "P": "15",
+              "K": "15"
+            },
+            "units": "kg/ha"
+          },
+          "applicationMode": "side-dressing",
+          "frequency": "once during seedling stage, repeated after 3 weeks",
+          "reasoning": [
+            "Side-dressing ensures close delivery of nutrients to seedlings.",
+            "A balanced 15-15-15 ratio provides sufficient nutrients for overall growth.",
+            "Low nitrogen, phosphorous, and potassium levels require direct supplementation."
+          ]
+        }
+      },
+      {
+        "conditions": {
+          "cropType": "cereal",
+          "growthStage": "seedling",
+          "yieldTarget": "low",
+          "fertilizerHistory": "none",
+          "waterRequirements": "low",
+          "temperature": "cold",
+          "humidity": "low",
+          "rainfall": "low",
+          "season": "spring",
+          "location": "tropical",
+          "pHLevel": "acidic",
+          "nitrogen": "low",
+          "phosphorous": "low",
+          "potassium": "low",
+          "soilType": "loamy",
+          "organicMatter": "low",
+          "soilMoisture": "low",
+          "electricalConductivity": "low",
+          "preferedFertilizerType": "compost",
+          "preferedApplicationMethod": "broadcasting"
+        },
+        "recommendations": {
+          "fertilizerType": "compost",
+          "NPK": {
+            "ratio": "2-1-1",
+            "values": {
+              "N": "2",
+              "P": "1",
+              "K": "1"
+            },
+            "units": "kg/ha"
+          },
+          "applicationMode": "broadcasting",
+          "frequency": "once at planting, supplemented with organic mulch",
+          "reasoning": [
+            "Compost is ideal for increasing organic matter and nutrient retention in low-nutrient loamy soils.",
+            "Broadcasting compost improves soil fertility and promotes root development during seedling stage.",
+            "Low nitrogen and acidic pH benefit from organic amendments like compost."
+          ]
+        }
+      },
+      {
+        "conditions": {
+          "cropType": "cereal",
+          "growthStage": "seedling",
+          "yieldTarget": "low",
+          "fertilizerHistory": "none",
+          "waterRequirements": "low",
+          "temperature": "cold",
+          "humidity": "low",
+          "rainfall": "low",
+          "season": "spring",
+          "location": "tropical",
+          "pHLevel": "acidic",
+          "nitrogen": "low",
+          "phosphorous": "low",
+          "potassium": "low",
+          "soilType": "loamy",
+          "organicMatter": "low",
+          "soilMoisture": "low",
+          "electricalConductivity": "low",
+          "preferedFertilizerType": "compost",
+          "preferedApplicationMethod": "fertigation"
+        },
+        "recommendations": {
+          "fertilizerType": "compost",
+          "NPK": {
+            "ratio": "3-1-1",
+            "values": {
+              "N": "3",
+              "P": "1",
+              "K": "1"
+            },
+            "units": "kg/ha"
+          },
+          "applicationMode": "fertigation",
+          "frequency": "every 2 weeks during seedling stage",
+          "reasoning": [
+            "Fertigation allows controlled nutrient delivery through water.",
+            "Compost adds organic matter and improves soil structure.",
+            "Supports low-nutrient soils and promotes healthy growth in cold temperatures."
+          ]
+        }
+      },
+      {
+        "conditions": {
+          "cropType": "cereal",
+          "growthStage": "seedling",
+          "yieldTarget": "low",
+          "fertilizerHistory": "none",
+          "waterRequirements": "low",
+          "temperature": "cold",
+          "humidity": "low",
+          "rainfall": "low",
+          "season": "spring",
+          "location": "tropical",
+          "pHLevel": "acidic",
+          "nitrogen": "low",
+          "phosphorous": "low",
+          "potassium": "low",
+          "soilType": "loamy",
+          "organicMatter": "low",
+          "soilMoisture": "low",
+          "electricalConductivity": "low",
+          "preferedFertilizerType": "compost",
+          "preferedApplicationMethod": "side-dressing"
+        },
+        "recommendations": {
+          "fertilizerType": "compost",
+          "NPK": {
+            "ratio": "4-1-1",
+            "values": {
+              "N": "4",
+              "P": "1",
+              "K": "1"
+            },
+            "units": "kg/ha"
+          },
+          "applicationMode": "side-dressing",
+          "frequency": "once at seedling stage, repeat after 3 weeks",
+          "reasoning": [
+            "Side-dressing ensures targeted nutrient supply to the root zone.",
+            "Compost enhances soil organic matter and nutrient retention.",
+            "Best suited for low-nitrogen and acidic soil conditions."
+          ]
+        }
+      },
+      {
+        "conditions": {
+          "cropType": "cereal",
+          "growthStage": "seedling",
+          "yieldTarget": "low",
+          "fertilizerHistory": "none",
+          "waterRequirements": "low",
+          "temperature": "cold",
+          "humidity": "low",
+          "rainfall": "low",
+          "season": "spring",
+          "location": "tropical",
+          "pHLevel": "acidic",
+          "nitrogen": "low",
+          "phosphorous": "low",
+          "potassium": "low",
+          "soilType": "loamy",
+          "organicMatter": "low",
+          "soilMoisture": "low",
+          "electricalConductivity": "low",
+          "preferedFertilizerType": "organic",
+          "preferedApplicationMethod": "broadcasting"
+        },
+        "recommendations": {
+          "fertilizerType": "organic",
+          "NPK": {
+            "ratio": "2-1-1",
+            "values": {
+              "N": "2",
+              "P": "1",
+              "K": "1"
+            },
+            "units": "kg/ha"
+          },
+          "applicationMode": "broadcasting",
+          "frequency": "once at planting, supplemented with mulching",
+          "reasoning": [
+            "Broadcasting organic fertilizers improves soil fertility and enhances soil structure.",
+            "Low nitrogen, acidic pH, and loamy soil conditions benefit from organic amendments.",
+            "Encourages gradual nutrient release for better seedling establishment."
+          ]
+        }
+      },
+      {
+        "conditions": {
+          "cropType": "cereal",
+          "growthStage": "seedling",
+          "yieldTarget": "low",
+          "fertilizerHistory": "none",
+          "waterRequirements": "low",
+          "temperature": "cold",
+          "humidity": "low",
+          "rainfall": "low",
+          "season": "spring",
+          "location": "tropical",
+          "pHLevel": "acidic",
+          "nitrogen": "low",
+          "phosphorous": "low",
+          "potassium": "low",
+          "soilType": "loamy",
+          "organicMatter": "low",
+          "soilMoisture": "low",
+          "electricalConductivity": "low",
+          "preferedFertilizerType": "organic",
+          "preferedApplicationMethod": "fertigation"
+        },
+        "recommendations": {
+          "fertilizerType": "organic",
+          "NPK": {
+            "ratio": "3-1-1",
+            "values": {
+              "N": "3",
+              "P": "1",
+              "K": "1"
+            },
+            "units": "kg/ha"
+          },
+          "applicationMode": "fertigation",
+          "frequency": "every 10 days during seedling stage",
+          "reasoning": [
+            "Fertigation optimizes nutrient uptake through controlled application.",
+            "Organic fertilizers improve soil structure and boost microbial activity.",
+            "Supports gradual release of nutrients, essential for loamy soils."
+          ]
+        }
+      },
+      {
+        "conditions": {
+          "cropType": "cereal",
+          "growthStage": "seedling",
+          "yieldTarget": "low",
+          "fertilizerHistory": "none",
+          "waterRequirements": "low",
+          "temperature": "cold",
+          "humidity": "low",
+          "rainfall": "low",
+          "season": "spring",
+          "location": "tropical",
+          "pHLevel": "acidic",
+          "nitrogen": "low",
+          "phosphorous": "low",
+          "potassium": "low",
+          "soilType": "loamy",
+          "organicMatter": "low",
+          "soilMoisture": "moderate",
+          "electricalConductivity": "low",
+          "preferedFertilizerType": "organic",
+          "preferedApplicationMethod": "side-dressing"
+        },
+        "recommendations": {
+          "fertilizerType": "organic",
+          "NPK": {
+            "ratio": "4-2-1",
+            "values": {
+              "N": "4",
+              "P": "2",
+              "K": "1"
+            },
+            "units": "kg/ha"
+          },
+          "applicationMode": "side-dressing",
+          "frequency": "once at seedling stage, repeat after 2 weeks",
+          "reasoning": [
+            "Side-dressing ensures targeted nutrient delivery for moderate soil moisture.",
+            "Organic fertilizers improve soil health and are ideal for loamy, low-organic matter soils.",
+            "Encourages consistent nitrogen supply for seedling growth in acidic conditions."
+          ]
+        }
+      },
+      {
+        "conditions": {
+          "cropType": "cereal",
+          "growthStage": "seedling",
+          "yieldTarget": "low",
+          "fertilizerHistory": "none",
+          "waterRequirements": "low",
+          "temperature": "cold",
+          "humidity": "low",
+          "rainfall": "low",
+          "season": "spring",
+          "location": "tropical",
+          "pHLevel": "acidic",
+          "nitrogen": "low",
+          "phosphorous": "low",
+          "potassium": "low",
+          "soilType": "loamy",
+          "organicMatter": "low",
+          "soilMoisture": "moderate",
+          "electricalConductivity": "low",
+          "preferedFertilizerType": "slow-release",
+          "preferedApplicationMethod": "broadcasting"
+        },
+        "recommendations": {
+          "fertilizerType": "slow-release",
+          "NPK": {
+            "ratio": "3-2-1",
+            "values": {
+              "N": "3",
+              "P": "2",
+              "K": "1"
+            },
+            "units": "kg/ha"
+          },
+          "applicationMode": "broadcasting",
+          "frequency": "at planting, supplemented every 4 weeks",
+          "reasoning": [
+            "Broadcasting slow-release fertilizers allows even distribution across the field.",
+            "Slow-release formulations are effective for moderate soil moisture and gradual nutrient uptake.",
+            "Supports seedling growth by maintaining a steady nutrient supply in low-nutrient soils."
+          ]
+        }
+      },
+      {
+        "conditions": {
+          "cropType": "cereal",
+          "growthStage": "seedling",
+          "yieldTarget": "low",
+          "fertilizerHistory": "none",
+          "waterRequirements": "low",
+          "temperature": "cold",
+          "humidity": "low",
+          "rainfall": "low",
+          "season": "spring",
+          "location": "tropical",
+          "pHLevel": "acidic",
+          "nitrogen": "low",
+          "phosphorous": "low",
+          "potassium": "low",
+          "soilType": "loamy",
+          "organicMatter": "low",
+          "soilMoisture": "moderate",
+          "electricalConductivity": "low",
+          "preferedFertilizerType": "slow-release",
+          "preferedApplicationMethod": "fertigation"
+        },
+        "recommendations": {
+          "fertilizerType": "slow-release",
+          "NPK": {
+            "ratio": "3-1-1",
+            "values": {
+              "N": "3",
+              "P": "1",
+              "K": "1"
+            },
+            "units": "kg/ha"
+          },
+          "applicationMode": "fertigation",
+          "frequency": "every 3 weeks during seedling stage",
+          "reasoning": [
+            "Fertigation with slow-release fertilizers ensures precise nutrient delivery for seedlings.",
+            "Ideal for moderate soil moisture levels and loamy soil with low organic matter.",
+            "Supports controlled nitrogen release and better absorption in acidic soils."
+          ]
+        }
+      },
+      {
+        "cropType": "cereal",
+        "growthStage": "seedling",
+        "yieldTarget": "low",
+        "fertilizerHistory": "none",
+        "waterRequirements": "low",
+        "temperature": "cold",
+        "humidity": "low",
+        "rainfall": "low",
+        "season": "spring",
+        "location": "tropical",
+        "pHLevel": "acidic",
+        "nitrogen": "low",
+        "phosphorous": "low",
+        "potassium": "low",
+        "soilType": "loamy",
+        "organicMatter": "low",
+        "soilMoisture": "low",
+        "electricalConductivity": "high",
+        "preferedFertilizerType": "organic",
+        "preferedApplicationMethod": "side-dressing",
+        "recommendations": {
+            "fertilizerType": "organic manure",
+            "NPK": {
+                "ratio": "3:2:1",
                 "values": {
-                  "N": 80,
-                  "P": 160,
-                  "K": 80
+                    "N": "30",
+                    "P": "20",
+                    "K": "10"
                 },
                 "units": "kg/ha"
+            },
+            "applicationMode": "side-dressing",
+            "frequency": "Every 2 weeks",
+            "reasoning": [
+                "The soil is acidic with low nutrients; organic manure improves pH and nutrient content.",
+                "Side-dressing ensures nutrients are absorbed efficiently at the seedling stage."
+            ]
+        }
+    },
+    {
+      "cropType": "fruit",
+      "growthStage": "fruiting",
+      "yieldTarget": "veryHigh",
+      "fertilizerHistory": "moderate",
+      "waterRequirements": "high",
+      "temperature": "hot",
+      "humidity": "veryHigh",
+      "rainfall": "high",
+      "season": "spring",
+      "location": "coastal",
+      "pHLevel": "neutral",
+      "nitrogen": "moderate",
+      "phosphorous": "moderate",
+      "potassium": "high",
+      "soilType": "loamy",
+      "organicMatter": "low",
+      "soilMoisture": "low",
+      "electricalConductivity": "high",
+      "preferedFertilizerType": "slow-release",
+      "preferedApplicationMethod": "side-dressing",
+      "recommendations": {
+          "fertilizerType": "slow-release",
+          "NPK": {
+              "ratio": "10-10-10",
+              "values": {
+                  "N": "10",
+                  "P": "10",
+                  "K": "10"
               },
-              "applicationMode": "Top dressing",
-              "frequency": "Two applications, 4 weeks apart",
-              "reasoning": [
-                "High N demand during vegetative growth, supplemented by P for root development and K for overall plant health.",
-                "Low soil NPK requires higher application."
-              ] 
-            }
-          }
-        ]
+              "units": "kg/ha"
+          },
+          "applicationMode": "side-dressing",
+          "frequency": "every 2 months",
+          "reasoning": [
+              "The soil type is loamy, which retains nutrients well.",
+              "The water requirement is high, indicating a need for consistent nutrient supply.",
+              "A slow-release fertilizer ensures nutrients are available over a long period, fitting the crop's growing season."
+          ]
       }
+  },
+  {
+      "cropType": "fruit",
+      "growthStage": "fruiting",
+      "yieldTarget": "low",
+      "fertilizerHistory": "high",
+      "waterRequirements": "moderate",
+      "temperature": "moderate",
+      "humidity": "high",
+      "rainfall": "high",
+      "season": "winter",
+      "location": "tropical",
+      "pHLevel": "neutral",
+      "nitrogen": "low",
+      "phosphorous": "low",
+      "potassium": "veryHigh",
+      "soilType": "saline",
+      "organicMatter": "high",
+      "soilMoisture": "veryHigh",
+      "electricalConductivity": "extreme",
+      "preferedFertilizerType": "NPK",
+      "preferedApplicationMethod": "side-dressing",
+      "recommendations": {
+          "fertilizerType": "NPK",
+          "NPK": {
+              "ratio": "15-30-20",
+              "values": {
+                  "N": "15",
+                  "P": "30",
+                  "K": "20"
+              },
+              "units": "kg/ha"
+          },
+          "applicationMode": "side-dressing",
+          "frequency": "every 2 months",
+          "reasoning": [
+              "The soil is saline, so a high phosphorous fertilizer is needed for better root development.",
+              "The plant has a low yield target, so a balanced nutrient mix (15-30-20) is recommended.",
+              "High potassium is necessary to support the plant's flowering and fruiting stages, particularly in winter."
+          ]
+      }
+  },
+  {
+    "cropType": "oilseed",
+    "growthStage": "vegetative",
+    "yieldTarget": "moderate",
+    "fertilizerHistory": "high",
+    "waterRequirements": "high",
+    "temperature": "moderate",
+    "humidity": "moderate",
+    "rainfall": "moderate",
+    "season": "summer",
+    "location": "arid",
+    "pHLevel": "acidic",
+    "nitrogen": "veryHigh",
+    "phosphorous": "low",
+    "potassium": "low",
+    "soilType": "loamy",
+    "organicMatter": "high",
+    "soilMoisture": "veryHigh",
+    "electricalConductivity": "veryHigh",
+    "preferedFertilizerType": "slow-release",
+    "preferedApplicationMethod": "side-dressing",
+    "recommendations": {
+        "fertilizerType": "slow-release",
+        "NPK": {
+            "ratio": "20-10-10",
+            "values": {
+                "N": "20",
+                "P": "10",
+                "K": "10"
+            },
+            "units": "kg/ha"
+        },
+        "applicationMode": "side-dressing",
+        "frequency": "every 2 months",
+        "reasoning": [
+            "The nitrogen requirement is very high for oilseeds, so the recommended fertilizer ratio is 20-10-10.",
+            "The soil is loamy and retains nutrients well, so a slow-release fertilizer will provide sustained nourishment over time.",
+            "Given the high organic matter and soil moisture, a moderate amount of phosphorus and potassium is adequate."
+        ]
     }
+},
+{
+  "cropType": "tuber",
+  "growthStage": "harvest",
+  "yieldTarget": "veryHigh",
+  "fertilizerHistory": "low",
+  "waterRequirements": "variable",
+  "temperature": "cold",
+  "humidity": "high",
+  "rainfall": "moderate",
+  "season": "wet",
+  "location": "temperate",
+  "pHLevel": "slightlyAcidic",
+  "nitrogen": "moderate",
+  "phosphorous": "low",
+  "potassium": "low",
+  "soilType": "sandy",
+  "organicMatter": "veryHigh",
+  "soilMoisture": "moderate",
+  "electricalConductivity": "extreme",
+  "preferedFertilizerType": "slow-release",
+  "preferedApplicationMethod": "fertigation",
+  "recommendations": {
+      "fertilizerType": "slow-release",
+      "NPK": {
+          "ratio": "10-20-15",
+          "values": {
+              "N": "10",
+              "P": "20",
+              "K": "15"
+          },
+          "units": "kg/ha"
+      },
+      "applicationMode": "fertigation",
+      "frequency": "every 3 months",
+      "reasoning": [
+          "The high organic matter in the soil requires a slow-release fertilizer to sustain long-term plant growth.",
+          "The low potassium and phosphorus levels suggest a fertilizer mix with a higher ratio of phosphorus (20) to support tuber growth during the harvest stage.",
+          "Fertigation is chosen for precise nutrient delivery to the roots and better nutrient uptake."
+      ]
   }
-  
-  
+},
+{
+  "cropType": "legume",
+  "growthStage": "fruiting",
+  "yieldTarget": "slightlyHigh",
+  "fertilizerHistory": "none",
+  "waterRequirements": "veryHigh",
+  "temperature": "moderate",
+  "humidity": "veryHigh",
+  "rainfall": "veryHigh",
+  "season": "summer",
+  "location": "coastal",
+  "pHLevel": "acidic",
+  "nitrogen": "moderate",
+  "phosphorous": "moderate",
+  "potassium": "moderate",
+  "soilType": "loamy",
+  "organicMatter": "low",
+  "soilMoisture": "high",
+  "electricalConductivity": "extreme",
+  "preferedFertilizerType": "NPK",
+  "preferedApplicationMethod": "broadcasting",
+  "recommendations": {
+      "fertilizerType": "NPK",
+      "NPK": {
+          "ratio": "20-10-20",
+          "values": {
+              "N": "20",
+              "P": "10",
+              "K": "20"
+          },
+          "units": "kg/ha"
+      },
+      "applicationMode": "broadcasting",
+      "frequency": "every 2 months",
+      "reasoning": [
+          "Moderate nitrogen, phosphorus, and potassium levels are suitable for slightly high yield legumes in the fruiting stage.",
+          "Broadcasting is the recommended method for legumes with high moisture and rainfall in the summer season.",
+          "High soil moisture and extreme conductivity require a balanced fertilizer mix to support both vegetative and reproductive growth."
+      ]
+  }
+},
+{
+  "cropType": "legume",
+  "growthStage": "fruiting",
+  "yieldTarget": "high",
+  "fertilizerHistory": "low",
+  "waterRequirements": "low",
+  "temperature": "cool",
+  "humidity": "extreme",
+  "rainfall": "high",
+  "season": "summer",
+  "location": "mountainous",
+  "pHLevel": "alkaline",
+  "nitrogen": "veryHigh",
+  "phosphorous": "high",
+  "potassium": "high",
+  "soilType": "loamy",
+  "organicMatter": "moderate",
+  "soilMoisture": "high",
+  "electricalConductivity": "low",
+  "preferedFertilizerType": "slow-release",
+  "preferedApplicationMethod": "fertigation",
+  "recommendations": {
+      "fertilizerType": "slow-release",
+      "NPK": {
+          "ratio": "30-20-20",
+          "values": {
+              "N": "30",
+              "P": "20",
+              "K": "20"
+          },
+          "units": "kg/ha"
+      },
+      "applicationMode": "fertigation",
+      "frequency": "every 2 months",
+      "reasoning": [
+          "The very high nitrogen requirement and high phosphorous/potassium levels make a 30-20-20 NPK fertilizer optimal for this legume crop.",
+          "Slow-release fertilizer helps to ensure a constant supply of nutrients in the cool mountainous region, supporting the high yield goal.",
+          "Fertigation is used for precise nutrient delivery to match the plant's high nutrient demands during fruiting."
+      ]
+  }
+},
+{
+  "cropType": "vegetable",
+  "growthStage": "vegetative",
+  "yieldTarget": "low",
+  "fertilizerHistory": "none",
+  "waterRequirements": "moderate",
+  "temperature": "cool",
+  "humidity": "low",
+  "rainfall": "veryHigh",
+  "season": "dry",
+  "location": "mountainous",
+  "pHLevel": "alkaline",
+  "nitrogen": "low",
+  "phosphorous": "moderate",
+  "potassium": "veryHigh",
+  "soilType": "loamy",
+  "organicMatter": "low",
+  "soilMoisture": "moderate",
+  "electricalConductivity": "low",
+  "preferedFertilizerType": "compost",
+  "preferedApplicationMethod": "broadcasting",
+  "recommendations": {
+      "fertilizerType": "compost",
+      "NPK": {
+          "ratio": "5-10-5",
+          "values": {
+              "N": "5",
+              "P": "10",
+              "K": "5"
+          },
+          "units": "kg/ha"
+      },
+      "applicationMode": "broadcasting",
+      "frequency": "every 2 months",
+      "reasoning": [
+          "Low nitrogen levels suggest a balanced fertilizer with moderate phosphorus.",
+          "Potassium is very high, so a balanced NPK with lower potassium is recommended.",
+          "Broadcasting compost will provide a slow-release, organic source of nutrients that is well-suited for low-organic matter soils."
+      ]
+  }
+},
+{
+  "cropType": "fruit",
+  "growthStage": "vegetative",
+  "yieldTarget": "veryHigh",
+  "fertilizerHistory": "moderate",
+  "waterRequirements": "veryHigh",
+  "temperature": "hot",
+  "humidity": "moderate",
+  "rainfall": "veryHigh",
+  "season": "winter",
+  "location": "coastal",
+  "pHLevel": "neutral",
+  "nitrogen": "low",
+  "phosphorous": "veryHigh",
+  "potassium": "high",
+  "soilType": "peat",
+  "organicMatter": "veryHigh",
+  "soilMoisture": "high",
+  "electricalConductivity": "low",
+  "preferedFertilizerType": "organic",
+  "preferedApplicationMethod": "fertigation",
+  "recommendations": {
+      "fertilizerType": "organic",
+      "NPK": {
+          "ratio": "10-30-20",
+          "values": {
+              "N": "10",
+              "P": "30",
+              "K": "20"
+          },
+          "units": "kg/ha"
+      },
+      "applicationMode": "fertigation",
+      "frequency": "every 3 months",
+      "reasoning": [
+          "The very high phosphorous requirement is met with a higher phosphorus fertilizer.",
+          "Potassium is moderate, so a balanced ratio is recommended to encourage fruiting.",
+          "Organic fertilizer, applied via fertigation, ensures consistent nutrient delivery in high moisture environments."
+      ]
+  }
+},
+{
+  "cropType": "tuber",
+  "growthStage": "harvest",
+  "yieldTarget": "veryHigh",
+  "fertilizerHistory": "moderate",
+  "waterRequirements": "veryHigh",
+  "temperature": "hot",
+  "humidity": "low",
+  "rainfall": "veryHigh",
+  "season": "wet",
+  "location": "arid",
+  "pHLevel": "slightlyAlkaline",
+  "nitrogen": "high",
+  "phosphorous": "veryHigh",
+  "potassium": "moderate",
+  "soilType": "chalky",
+  "organicMatter": "low",
+  "soilMoisture": "moderate",
+  "electricalConductivity": "extreme",
+  "preferedFertilizerType": "compost",
+  "preferedApplicationMethod": "broadcasting",
+  "recommendations": {
+      "fertilizerType": "compost",
+      "NPK": {
+          "ratio": "20-30-10",
+          "values": {
+              "N": "20",
+              "P": "30",
+              "K": "10"
+          },
+          "units": "kg/ha"
+      },
+      "applicationMode": "broadcasting",
+      "frequency": "every 2 months",
+      "reasoning": [
+          "High nitrogen and phosphorus levels suggest a fertilizer mix with increased nitrogen and phosphorus.",
+          "Moderate potassium and the arid location make a slower-release organic fertilizer suitable.",
+          "Compost is recommended to supply steady nutrients and improve soil organic matter for future crops."
+      ]
+  }
+},
+{
+  "cropType": "tuber",
+  "growthStage": "harvest",
+  "yieldTarget": "veryHigh",
+  "fertilizerHistory": "moderate",
+  "waterRequirements": "veryHigh",
+  "temperature": "hot",
+  "humidity": "low",
+  "rainfall": "veryHigh",
+  "season": "wet",
+  "location": "arid",
+  "pHLevel": "slightlyAlkaline",
+  "nitrogen": "high",
+  "phosphorous": "veryHigh",
+  "potassium": "moderate",
+  "soilType": "chalky",
+  "organicMatter": "low",
+  "soilMoisture": "moderate",
+  "electricalConductivity": "extreme",
+  "preferedFertilizerType": "compost",
+  "preferedApplicationMethod": "broadcasting",
+  "recommendations": {
+      "fertilizerType": "compost",
+      "NPK": {
+          "ratio": "20-30-10",
+          "values": {
+              "N": "20",
+              "P": "30",
+              "K": "10"
+          },
+          "units": "kg/ha"
+      },
+      "applicationMode": "broadcasting",
+      "frequency": "every 2 months",
+      "reasoning": [
+          "High nitrogen and phosphorus levels suggest a fertilizer mix with increased nitrogen and phosphorus.",
+          "Moderate potassium and the arid location make a slower-release organic fertilizer suitable.",
+          "Compost is recommended to supply steady nutrients and improve soil organic matter for future crops."
+      ]
+  }
+},
+{
+  "cropType": "vegetable",
+  "growthStage": "fruiting",
+  "yieldTarget": "high",
+  "fertilizerHistory": "low",
+  "waterRequirements": "high",
+  "temperature": "cold",
+  "humidity": "high",
+  "rainfall": "veryHigh",
+  "season": "winter",
+  "location": "coastal",
+  "pHLevel": "neutral",
+  "nitrogen": "moderate",
+  "phosphorous": "high",
+  "potassium": "moderate",
+  "soilType": "clay",
+  "organicMatter": "veryHigh",
+  "soilMoisture": "moderate",
+  "electricalConductivity": "high",
+  "preferedFertilizerType": "organic",
+  "preferedApplicationMethod": "broadcasting",
+  "recommendations": {
+      "fertilizerType": "organic",
+      "NPK": {
+          "ratio": "15-20-15",
+          "values": {
+              "N": "15",
+              "P": "20",
+              "K": "15"
+          },
+          "units": "kg/ha"
+      },
+      "applicationMode": "broadcasting",
+      "frequency": "every 3 months",
+      "reasoning": [
+          "Moderate nitrogen and potassium levels with high phosphorous requirements make a balanced NPK mix ideal.",
+          "Organic fertilizer is appropriate for clay soils, which retain nutrients but may need additional organic matter.",
+          "Broadcasting ensures that nutrients are spread evenly in high-moisture environments."
+      ]
+  }
+},
+{
+  "cropType": "tuber",
+  "growthStage": "fruiting",
+  "yieldTarget": "low",
+  "fertilizerHistory": "low",
+  "waterRequirements": "high",
+  "temperature": "cool",
+  "humidity": "extreme",
+  "rainfall": "veryHigh",
+  "season": "dry",
+  "location": "coastal",
+  "pHLevel": "neutral",
+  "nitrogen": "moderate",
+  "phosphorous": "moderate",
+  "potassium": "high",
+  "soilType": "sandy",
+  "organicMatter": "low",
+  "soilMoisture": "low",
+  "electricalConductivity": "high",
+  "preferedFertilizerType": "organic",
+  "preferedApplicationMethod": "fertigation",
+  "recommendations": {
+      "fertilizerType": "organic compost",
+      "NPK": {
+          "ratio": "1:1:1",
+          "values": {
+              "N": 50,
+              "P": 50,
+              "K": 50
+          },
+          "units": "kg/ha"
+      },
+      "applicationMode": "fertigation",
+      "frequency": "monthly",
+      "reasoning": [
+          "Organic compost will provide a balanced nutrient supply for moderate growth",
+          "Fertigation helps with efficient nutrient uptake and water retention"
+      ]
+  }
+},
+{
+  "cropType": "fruit",
+  "growthStage": "vegetative",
+  "yieldTarget": "high",
+  "fertilizerHistory": "moderate",
+  "waterRequirements": "moderate",
+  "temperature": "hot",
+  "humidity": "extreme",
+  "rainfall": "veryHigh",
+  "season": "dry",
+  "location": "mountainous",
+  "pHLevel": "slightlyAlkaline",
+  "nitrogen": "high",
+  "phosphorous": "moderate",
+  "potassium": "low",
+  "soilType": "chalky",
+  "organicMatter": "low",
+  "soilMoisture": "low",
+  "electricalConductivity": "high",
+  "preferedFertilizerType": "slow-release",
+  "preferedApplicationMethod": "side-dressing",
+  "recommendations": {
+      "fertilizerType": "slow-release NPK",
+      "NPK": {
+          "ratio": "3:2:1",
+          "values": {
+              "N": 75,
+              "P": 50,
+              "K": 25
+          },
+          "units": "kg/ha"
+      },
+      "applicationMode": "side-dressing",
+      "frequency": "every 3 months",
+      "reasoning": [
+          "Slow-release fertilizer ensures steady nutrient supply",
+          "Side-dressing helps direct nutrients to the root zone for better uptake"
+      ]
+  }
+},
+{
+  "cropType": "fruit",
+  "growthStage": "fruiting",
+  "yieldTarget": "veryHigh",
+  "fertilizerHistory": "moderate",
+  "waterRequirements": "variable",
+  "temperature": "veryHot",
+  "humidity": "low",
+  "rainfall": "low",
+  "season": "spring",
+  "location": "mountainous",
+  "pHLevel": "acidic",
+  "nitrogen": "low",
+  "phosphorous": "low",
+  "potassium": "veryHigh",
+  "soilType": "clay",
+  "organicMatter": "veryHigh",
+  "soilMoisture": "low",
+  "electricalConductivity": "extreme",
+  "preferedFertilizerType": "compost",
+  "preferedApplicationMethod": "fertigation",
+  "recommendations": {
+      "fertilizerType": "composted manure",
+      "NPK": {
+          "ratio": "1:0.5:2",
+          "values": {
+              "N": 40,
+              "P": 20,
+              "K": 80
+          },
+          "units": "kg/ha"
+      },
+      "applicationMode": "fertigation",
+      "frequency": "bi-weekly",
+      "reasoning": [
+          "High potassium requirement for fruiting",
+          "Composted manure enhances soil organic matter and provides a slow release of nutrients"
+      ]
+  }
+},
+{
+  "cropType": "tuber",
+  "growthStage": "flowering",
+  "yieldTarget": "low",
+  "fertilizerHistory": "none",
+  "waterRequirements": "variable",
+  "temperature": "moderate",
+  "humidity": "low",
+  "rainfall": "moderate",
+  "season": "spring",
+  "location": "coastal",
+  "pHLevel": "alkaline",
+  "nitrogen": "low",
+  "phosphorous": "veryHigh",
+  "potassium": "veryHigh",
+  "soilType": "clay",
+  "organicMatter": "veryHigh",
+  "soilMoisture": "high",
+  "electricalConductivity": "moderate",
+  "preferedFertilizerType": "slow-release",
+  "preferedApplicationMethod": "fertigation",
+  "recommendations": {
+      "fertilizerType": "slow-release NPK",
+      "NPK": {
+          "ratio": "2:3:2",
+          "values": {
+              "N": 60,
+              "P": 90,
+              "K": 60
+          },
+          "units": "kg/ha"
+      },
+      "applicationMode": "fertigation",
+      "frequency": "monthly",
+      "reasoning": [
+          "Slow-release nutrients ensure sustained feeding through the flowering period",
+          "Fertigation ensures nutrients reach the root zone effectively"
+      ]
+  }
+},
+{
+  "cropType": "tuber",
+  "growthStage": "harvest",
+  "yieldTarget": "veryHigh",
+  "fertilizerHistory": "moderate",
+  "waterRequirements": "high",
+  "temperature": "veryHot",
+  "humidity": "moderate",
+  "rainfall": "moderate",
+  "season": "wet",
+  "location": "temperate",
+  "pHLevel": "neutral",
+  "nitrogen": "low",
+  "phosphorous": "high",
+  "potassium": "high",
+  "soilType": "sandy",
+  "organicMatter": "low",
+  "soilMoisture": "veryHigh",
+  "electricalConductivity": "veryHigh",
+  "preferedFertilizerType": "NPK",
+  "preferedApplicationMethod": "side-dressing",
+  "recommendations": {
+      "fertilizerType": "NPK fertilizer",
+      "NPK": {
+          "ratio": "2:3:2",
+          "values": {
+              "N": 60,
+              "P": 90,
+              "K": 60
+          },
+          "units": "kg/ha"
+      },
+      "applicationMode": "side-dressing",
+      "frequency": "every 2 weeks",
+      "reasoning": [
+          "High potassium is essential for tuber development",
+          "Side-dressing application promotes nutrient availability during the harvest period"
+      ]
+  }
+},
+{
+  "cropType": "legume",
+  "growthStage": "vegetative",
+  "yieldTarget": "low",
+  "fertilizerHistory": "moderate",
+  "waterRequirements": "veryHigh",
+  "temperature": "hot",
+  "humidity": "low",
+  "rainfall": "high",
+  "season": "summer",
+  "location": "mountainous",
+  "pHLevel": "slightlyAcidic",
+  "nitrogen": "moderate",
+  "phosphorous": "high",
+  "potassium": "low",
+  "soilType": "clay",
+  "organicMatter": "high",
+  "soilMoisture": "low",
+  "electricalConductivity": "extreme",
+  "preferedFertilizerType": "organic",
+  "preferedApplicationMethod": "broadcasting",
+  "recommendations": {
+      "fertilizerType": "organic compost",
+      "NPK": {
+          "ratio": "1:1:1",
+          "values": {
+              "N": 50,
+              "P": 50,
+              "K": 50
+          },
+          "units": "kg/ha"
+      },
+      "applicationMode": "broadcasting",
+      "frequency": "monthly",
+      "reasoning": [
+          "Organic compost helps improve soil structure and nutrient balance",
+          "Broadcasting is effective for legumes to ensure even distribution of nutrients"
+      ]
+  }
+},
+{
+  "cropType": "fruit",
+  "growthStage": "harvest",
+  "yieldTarget": "moderate",
+  "fertilizerHistory": "high",
+  "waterRequirements": "high",
+  "temperature": "hot",
+  "humidity": "veryHigh",
+  "rainfall": "veryHigh",
+  "season": "summer",
+  "location": "temperate",
+  "pHLevel": "slightlyAlkaline",
+  "nitrogen": "veryHigh",
+  "phosphorous": "low",
+  "potassium": "veryHigh",
+  "soilType": "loamy",
+  "organicMatter": "low",
+  "soilMoisture": "high",
+  "electricalConductivity": "veryHigh",
+  "preferedFertilizerType": "slow-release",
+  "preferedApplicationMethod": "fertigation",
+  "recommendations": {
+      "fertilizerType": "NPK",
+      "NPK": {
+          "ratio": "20-10-20",
+          "values": {
+              "N": "200",
+              "P": "100",
+              "K": "200"
+          },
+          "units": "kg/ha"
+      },
+      "applicationMode": "fertigation",
+      "frequency": "every 3 weeks",
+      "reasoning": ["Increased nitrogen and potassium requirements for fruit harvest."]
+  }
+},
+{
+  "cropType": "fruit",
+  "growthStage": "harvest",
+  "yieldTarget": "moderate",
+  "fertilizerHistory": "high",
+  "waterRequirements": "veryHigh",
+  "temperature": "moderate",
+  "humidity": "moderate",
+  "rainfall": "low",
+  "season": "wet",
+  "location": "tropical",
+  "pHLevel": "acidic",
+  "nitrogen": "moderate",
+  "phosphorous": "low",
+  "potassium": "moderate",
+  "soilType": "saline",
+  "organicMatter": "low",
+  "soilMoisture": "moderate",
+  "electricalConductivity": "low",
+  "preferedFertilizerType": "organic",
+  "preferedApplicationMethod": "side-dressing",
+  "recommendations": {
+      "fertilizerType": "compost",
+      "NPK": {
+          "ratio": "10-5-10",
+          "values": {
+              "N": "100",
+              "P": "50",
+              "K": "100"
+          },
+          "units": "kg/ha"
+      },
+      "applicationMode": "side-dressing",
+      "frequency": "once every 6 weeks",
+      "reasoning": ["Low phosphorus levels require slow-release organic application."]
+  }
+},
+{
+  "cropType": "fruit",
+  "growthStage": "fruiting",
+  "yieldTarget": "veryHigh",
+  "fertilizerHistory": "moderate",
+  "waterRequirements": "low",
+  "temperature": "moderate",
+  "humidity": "veryHigh",
+  "rainfall": "high",
+  "season": "dry",
+  "location": "temperate",
+  "pHLevel": "neutral",
+  "nitrogen": "high",
+  "phosphorous": "moderate",
+  "potassium": "veryHigh",
+  "soilType": "chalky",
+  "organicMatter": "moderate",
+  "soilMoisture": "moderate",
+  "electricalConductivity": "high",
+  "preferedFertilizerType": "NPK",
+  "preferedApplicationMethod": "broadcasting",
+  "recommendations": {
+      "fertilizerType": "NPK",
+      "NPK": {
+          "ratio": "15-10-30",
+          "values": {
+              "N": "150",
+              "P": "100",
+              "K": "300"
+          },
+          "units": "kg/ha"
+      },
+      "applicationMode": "broadcasting",
+      "frequency": "every 4 weeks",
+      "reasoning": ["High potassium for better fruit development."]
+  }
+},
+{
+  "cropType": "fruit",
+  "growthStage": "seedling",
+  "yieldTarget": "high",
+  "fertilizerHistory": "high",
+  "waterRequirements": "variable",
+  "temperature": "veryHot",
+  "humidity": "low",
+  "rainfall": "variable",
+  "season": "spring",
+  "location": "temperate",
+  "pHLevel": "slightlyAlkaline",
+  "nitrogen": "moderate",
+  "phosphorous": "moderate",
+  "potassium": "veryHigh",
+  "soilType": "saline",
+  "organicMatter": "high",
+  "soilMoisture": "moderate",
+  "electricalConductivity": "moderate",
+  "preferedFertilizerType": "organic",
+  "preferedApplicationMethod": "fertigation",
+  "recommendations": {
+      "fertilizerType": "organic",
+      "NPK": {
+          "ratio": "20-10-10",
+          "values": {
+              "N": "200",
+              "P": "100",
+              "K": "100"
+          },
+          "units": "kg/ha"
+      },
+      "applicationMode": "fertigation",
+      "frequency": "every 2 weeks",
+      "reasoning": ["High potassium levels support growth during early stages."]
+  }
+},
+{
+  "cropType": "vegetable",
+  "growthStage": "seedling",
+  "yieldTarget": "veryHigh",
+  "fertilizerHistory": "low",
+  "waterRequirements": "variable",
+  "temperature": "moderate",
+  "humidity": "extreme",
+  "rainfall": "variable",
+  "season": "autumn",
+  "location": "coastal",
+  "pHLevel": "alkaline",
+  "nitrogen": "low",
+  "phosphorous": "veryHigh",
+  "potassium": "high",
+  "soilType": "peat",
+  "organicMatter": "moderate",
+  "soilMoisture": "veryHigh",
+  "electricalConductivity": "high",
+  "preferedFertilizerType": "NPK",
+  "preferedApplicationMethod": "side-dressing",
+  "recommendations": {
+      "fertilizerType": "NPK",
+      "NPK": {
+          "ratio": "20-10-10",
+          "values": {
+              "N": "200",
+              "P": "100",
+              "K": "100"
+          },
+          "units": "kg/ha"
+      },
+      "applicationMode": "side-dressing",
+      "frequency": "every 2 weeks",
+      "reasoning": ["Vegetables require high potassium and phosphorus to thrive."]
+  }
+},
+{
+  "cropType": "tuber",
+  "growthStage": "vegetative",
+  "yieldTarget": "low",
+  "fertilizerHistory": "moderate",
+  "waterRequirements": "high",
+  "temperature": "veryHot",
+  "humidity": "extreme",
+  "rainfall": "veryHigh",
+  "season": "summer",
+  "location": "temperate",
+  "pHLevel": "slightlyAlkaline",
+  "nitrogen": "high",
+  "phosphorous": "high",
+  "potassium": "low",
+  "soilType": "loamy",
+  "organicMatter": "low",
+  "soilMoisture": "veryHigh",
+  "electricalConductivity": "low",
+  "preferedFertilizerType": "compost",
+  "preferedApplicationMethod": "fertigation",
+  "recommendations": {
+      "fertilizerType": "compost",
+      "NPK": {
+          "ratio": "15-10-15",
+          "values": {
+              "N": "150",
+              "P": "100",
+              "K": "150"
+          },
+          "units": "kg/ha"
+      },
+      "applicationMode": "fertigation",
+      "frequency": "every 3 weeks",
+      "reasoning": ["Tuber crops need a balanced supply of nitrogen and phosphorus."]
+  }
+},
+{
+  "cropType": "legume",
+  "growthStage": "seedling",
+  "yieldTarget": "slightlyHigh",
+  "fertilizerHistory": "low",
+  "waterRequirements": "moderate",
+  "temperature": "veryHot",
+  "humidity": "moderate",
+  "rainfall": "high",
+  "season": "autumn",
+  "location": "temperate",
+  "pHLevel": "alkaline",
+  "nitrogen": "low",
+  "phosphorous": "high",
+  "potassium": "veryHigh",
+  "soilType": "peat",
+  "organicMatter": "moderate",
+  "soilMoisture": "low",
+  "electricalConductivity": "extreme",
+  "preferedFertilizerType": "organic",
+  "preferedApplicationMethod": "fertigation",
+  "recommendations": {
+      "fertilizerType": "organic",
+      "NPK": {
+          "ratio": "20-10-10",
+          "values": {
+              "N": "200",
+              "P": "100",
+              "K": "100"
+          },
+          "units": "kg/ha"
+      },
+      "applicationMode": "fertigation",
+      "frequency": "every 2 weeks",
+      "reasoning": ["High potassium to support legume growth during early stages."]
+  }
+},
+{
+  "cropType": "tuber",
+  "growthStage": "flowering",
+  "yieldTarget": "moderate",
+  "fertilizerHistory": "high",
+  "waterRequirements": "moderate",
+  "temperature": "cold",
+  "humidity": "low",
+  "rainfall": "variable",
+  "season": "spring",
+  "location": "tropical",
+  "pHLevel": "alkaline",
+  "nitrogen": "low",
+  "phosphorous": "high",
+  "potassium": "low",
+  "soilType": "loamy",
+  "organicMatter": "low",
+  "soilMoisture": "veryHigh",
+  "electricalConductivity": "low",
+  "preferedFertilizerType": "organic",
+  "preferedApplicationMethod": "broadcasting",
+  "recommendations": {
+      "fertilizerType": "organic",
+      "NPK": {
+          "ratio": "2:3:1",
+          "values": {
+              "N": "60",
+              "P": "90",
+              "K": "30"
+          },
+          "units": "kg/ha"
+      },
+      "applicationMode": "top-dressing",
+      "frequency": "every 3 weeks",
+      "reasoning": ["To support flowering", "To improve soil nitrogen levels"]
+  }
+},
+{
+  "cropType": "legume",
+  "growthStage": "fruiting",
+  "yieldTarget": "veryHigh",
+  "fertilizerHistory": "none",
+  "waterRequirements": "low",
+  "temperature": "moderate",
+  "humidity": "extreme",
+  "rainfall": "variable",
+  "season": "wet",
+  "location": "coastal",
+  "pHLevel": "slightlyAlkaline",
+  "nitrogen": "moderate",
+  "phosphorous": "high",
+  "potassium": "moderate",
+  "soilType": "peat",
+  "organicMatter": "high",
+  "soilMoisture": "moderate",
+  "electricalConductivity": "moderate",
+  "preferedFertilizerType": "slow-release",
+  "preferedApplicationMethod": "broadcasting",
+  "recommendations": {
+      "fertilizerType": "slow-release",
+      "NPK": {
+          "ratio": "3:1:2",
+          "values": {
+              "N": "90",
+              "P": "30",
+              "K": "60"
+          },
+          "units": "kg/ha"
+      },
+      "applicationMode": "broadcasting",
+      "frequency": "every 4 weeks",
+      "reasoning": ["To support fruiting", "Slow release to match crop growth pattern"]
+  }
+},
+{
+  "cropType": "tuber",
+  "growthStage": "seedling",
+  "yieldTarget": "low",
+  "fertilizerHistory": "low",
+  "waterRequirements": "high",
+  "temperature": "cool",
+  "humidity": "low",
+  "rainfall": "veryHigh",
+  "season": "spring",
+  "location": "temperate",
+  "pHLevel": "acidic",
+  "nitrogen": "veryHigh",
+  "phosphorous": "high",
+  "potassium": "high",
+  "soilType": "clay",
+  "organicMatter": "low",
+  "soilMoisture": "moderate",
+  "electricalConductivity": "extreme",
+  "preferedFertilizerType": "slow-release",
+  "preferedApplicationMethod": "fertigation",
+  "recommendations": {
+      "fertilizerType": "NPK",
+      "NPK": {
+          "ratio": "4:2:3",
+          "values": {
+              "N": "120",
+              "P": "60",
+              "K": "90"
+          },
+          "units": "kg/ha"
+      },
+      "applicationMode": "fertigation",
+      "frequency": "every 2 weeks",
+      "reasoning": ["To support seedling growth", "NPK balanced for initial growth"]
+  }
+},
+{
+  "cropType": "legume",
+  "growthStage": "seedling",
+  "yieldTarget": "slightlyHigh",
+  "fertilizerHistory": "moderate",
+  "waterRequirements": "high",
+  "temperature": "veryHot",
+  "humidity": "high",
+  "rainfall": "low",
+  "season": "dry",
+  "location": "mountainous",
+  "pHLevel": "slightlyAcidic",
+  "nitrogen": "veryHigh",
+  "phosphorous": "veryHigh",
+  "potassium": "veryHigh",
+  "soilType": "clay",
+  "organicMatter": "moderate",
+  "soilMoisture": "veryHigh",
+  "electricalConductivity": "high",
+  "preferedFertilizerType": "organic",
+  "preferedApplicationMethod": "fertigation",
+  "recommendations": {
+      "fertilizerType": "organic",
+      "NPK": {
+          "ratio": "5:4:5",
+          "values": {
+              "N": "150",
+              "P": "120",
+              "K": "150"
+          },
+          "units": "kg/ha"
+      },
+      "applicationMode": "fertigation",
+      "frequency": "every 3 weeks",
+      "reasoning": ["To support strong seedling development", "High potassium for better root growth"]
+  }
+},
+{
+  "cropType": "oilseed",
+  "growthStage": "flowering",
+  "yieldTarget": "veryHigh",
+  "fertilizerHistory": "moderate",
+  "waterRequirements": "low",
+  "temperature": "cold",
+  "humidity": "veryHigh",
+  "rainfall": "high",
+  "season": "summer",
+  "location": "coastal",
+  "pHLevel": "slightlyAcidic",
+  "nitrogen": "high",
+  "phosphorous": "low",
+  "potassium": "moderate",
+  "soilType": "chalky",
+  "organicMatter": "low",
+  "soilMoisture": "veryHigh",
+  "electricalConductivity": "veryHigh",
+  "preferedFertilizerType": "slow-release",
+  "preferedApplicationMethod": "fertigation",
+  "recommendations": {
+      "fertilizerType": "slow-release",
+      "NPK": {
+          "ratio": "4:1:3",
+          "values": {
+              "N": "120",
+              "P": "30",
+              "K": "90"
+          },
+          "units": "kg/ha"
+      },
+      "applicationMode": "fertigation",
+      "frequency": "every 2 weeks",
+      "reasoning": ["To optimize flowering", "Slow-release for consistent nutrient availability"]
+  }
+},
+{
+  "cropType": "legume",
+  "growthStage": "harvest",
+  "yieldTarget": "high",
+  "fertilizerHistory": "high",
+  "waterRequirements": "variable",
+  "temperature": "hot",
+  "humidity": "low",
+  "rainfall": "low",
+  "season": "autumn",
+  "location": "mountainous",
+  "pHLevel": "slightlyAcidic",
+  "nitrogen": "moderate",
+  "phosphorous": "low",
+  "potassium": "moderate",
+  "soilType": "peat",
+  "organicMatter": "low",
+  "soilMoisture": "moderate",
+  "electricalConductivity": "low",
+  "preferedFertilizerType": "compost",
+  "preferedApplicationMethod": "side-dressing",
+  "recommendations": {
+      "fertilizerType": "compost",
+      "NPK": {
+          "ratio": "2:1:2",
+          "values": {
+              "N": "60",
+              "P": "30",
+              "K": "60"
+          },
+          "units": "kg/ha"
+      },
+      "applicationMode": "side-dressing",
+      "frequency": "every 6 weeks",
+      "reasoning": ["To support final growth stages", "Compost for slow nutrient release"]
+  }
+},
+{
+  "cropType": "tuber",
+  "growthStage": "vegetative",
+  "yieldTarget": "slightlyHigh",
+  "fertilizerHistory": "none",
+  "waterRequirements": "variable",
+  "temperature": "cool",
+  "humidity": "extreme",
+  "rainfall": "variable",
+  "season": "winter",
+  "location": "arid",
+  "pHLevel": "alkaline",
+  "nitrogen": "low",
+  "phosphorous": "high",
+  "potassium": "moderate",
+  "soilType": "loamy",
+  "organicMatter": "low",
+  "soilMoisture": "high",
+  "electricalConductivity": "veryHigh",
+  "preferedFertilizerType": "NPK",
+  "preferedApplicationMethod": "fertigation",
+  "recommendations": {
+      "fertilizerType": "NPK",
+      "NPK": {
+          "ratio": "1:1:1",
+          "values": {
+              "N": "50",
+              "P": "50",
+              "K": "50"
+          },
+          "units": "kg/ha"
+      },
+      "applicationMode": "fertigation",
+      "frequency": "every 4 weeks",
+      "reasoning": [
+          "Provides balanced nutrients for vegetative growth",
+          "Enhances root development in loamy soil"
+      ]
+  }
+},
+{
+  "cropType": "oilseed",
+  "growthStage": "vegetative",
+  "yieldTarget": "slightlyHigh",
+  "fertilizerHistory": "low",
+  "waterRequirements": "variable",
+  "temperature": "hot",
+  "humidity": "low",
+  "rainfall": "veryHigh",
+  "season": "summer",
+  "location": "tropical",
+  "pHLevel": "acidic",
+  "nitrogen": "high",
+  "phosphorous": "veryHigh",
+  "potassium": "veryHigh",
+  "soilType": "saline",
+  "organicMatter": "high",
+  "soilMoisture": "moderate",
+  "electricalConductivity": "veryHigh",
+  "preferedFertilizerType": "compost",
+  "preferedApplicationMethod": "fertigation",
+  "recommendations": {
+      "fertilizerType": "compost",
+      "NPK": {
+          "ratio": "1:1:1",
+          "values": {
+              "N": "60",
+              "P": "60",
+              "K": "60"
+          },
+          "units": "kg/ha"
+      },
+      "applicationMode": "fertigation",
+      "frequency": "every 4 weeks",
+      "reasoning": [
+          "Enhances soil structure with organic matter",
+          "Balances nutrient levels for optimal growth"
+      ]
+  }
+},
+{
+  "cropType": "oilseed",
+  "growthStage": "vegetative",
+  "yieldTarget": "veryHigh",
+  "fertilizerHistory": "high",
+  "waterRequirements": "low",
+  "temperature": "veryHot",
+  "humidity": "extreme",
+  "rainfall": "veryHigh",
+  "season": "spring",
+  "location": "arid",
+  "pHLevel": "neutral",
+  "nitrogen": "low",
+  "phosphorous": "low",
+  "potassium": "high",
+  "soilType": "sandy",
+  "organicMatter": "high",
+  "soilMoisture": "high",
+  "electricalConductivity": "low",
+  "preferedFertilizerType": "slow-release",
+  "preferedApplicationMethod": "side-dressing",
+  "recommendations": {
+      "fertilizerType": "slow-release",
+      "NPK": {
+          "ratio": "2:1:2",
+          "values": {
+              "N": "80",
+              "P": "40",
+              "K": "80"
+          },
+          "units": "kg/ha"
+      },
+      "applicationMode": "side-dressing",
+      "frequency": "once per season",
+      "reasoning": [
+          "Slow-release fertilizer for extended nutrient supply",
+          "Perfect for sandy soil that drains quickly"
+      ]
+  }
+},
+{
+  "cropType": "vegetable",
+  "growthStage": "seedling",
+  "yieldTarget": "high",
+  "fertilizerHistory": "high",
+  "waterRequirements": "variable",
+  "temperature": "veryHot",
+  "humidity": "moderate",
+  "rainfall": "moderate",
+  "season": "summer",
+  "location": "mountainous",
+  "pHLevel": "acidic",
+  "nitrogen": "high",
+  "phosphorous": "moderate",
+  "potassium": "veryHigh",
+  "soilType": "silt",
+  "organicMatter": "veryHigh",
+  "soilMoisture": "high",
+  "electricalConductivity": "moderate",
+  "preferedFertilizerType": "slow-release",
+  "preferedApplicationMethod": "side-dressing",
+  "recommendations": {
+      "fertilizerType": "slow-release",
+      "NPK": {
+          "ratio": "2:1:3",
+          "values": {
+              "N": "100",
+              "P": "50",
+              "K": "150"
+          },
+          "units": "kg/ha"
+      },
+      "applicationMode": "side-dressing",
+      "frequency": "every 6 weeks",
+      "reasoning": [
+          "Balances nutrient supply for high yield",
+          "Enhances growth in silt-rich soil with good moisture retention"
+      ]
+  }
+},
+{
+  "cropType": "fruit",
+  "growthStage": "vegetative",
+  "yieldTarget": "moderate",
+  "fertilizerHistory": "low",
+  "waterRequirements": "veryHigh",
+  "temperature": "hot",
+  "humidity": "moderate",
+  "rainfall": "variable",
+  "season": "summer",
+  "location": "coastal",
+  "pHLevel": "slightlyAlkaline",
+  "nitrogen": "low",
+  "phosphorous": "veryHigh",
+  "potassium": "high",
+  "soilType": "saline",
+  "organicMatter": "veryHigh",
+  "soilMoisture": "high",
+  "electricalConductivity": "extreme",
+  "preferedFertilizerType": "organic",
+  "preferedApplicationMethod": "fertigation",
+  "recommendations": {
+      "fertilizerType": "organic",
+      "NPK": {
+          "ratio": "3:2:4",
+          "values": {
+              "N": "90",
+              "P": "60",
+              "K": "120"
+          },
+          "units": "kg/ha"
+      },
+      "applicationMode": "fertigation",
+      "frequency": "every 3 weeks",
+      "reasoning": [
+          "Provides essential nutrients for moderate growth",
+          "Organic fertilizer enhances soil health"
+      ]
+  }
+},
+{
+  "cropType": "legume",
+  "growthStage": "seedling",
+  "yieldTarget": "moderate",
+  "fertilizerHistory": "low",
+  "waterRequirements": "moderate",
+  "temperature": "moderate",
+  "humidity": "veryHigh",
+  "rainfall": "veryHigh",
+  "season": "summer",
+  "location": "temperate",
+  "pHLevel": "neutral",
+  "nitrogen": "veryHigh",
+  "phosphorous": "low",
+  "potassium": "veryHigh",
+  "soilType": "saline",
+  "organicMatter": "moderate",
+  "soilMoisture": "veryHigh",
+  "electricalConductivity": "high",
+  "preferedFertilizerType": "NPK",
+  "preferedApplicationMethod": "broadcasting",
+  "recommendations": {
+      "fertilizerType": "NPK",
+      "NPK": {
+          "ratio": "2:1:2",
+          "values": {
+              "N": "120",
+              "P": "60",
+              "K": "120"
+          },
+          "units": "kg/ha"
+      },
+      "applicationMode": "broadcasting",
+      "frequency": "every 4 weeks",
+      "reasoning": [
+          "Provides balanced nutrients for legumes",
+          "Suitable for high moisture environments"
+      ]
+  }
+},
+{
+  "cropType": "vegetable",
+  "growthStage": "seedling",
+  "yieldTarget": "slightlyHigh",
+  "fertilizerHistory": "moderate",
+  "waterRequirements": "high",
+  "temperature": "moderate",
+  "humidity": "extreme",
+  "rainfall": "variable",
+  "season": "winter",
+  "location": "arid",
+  "pHLevel": "slightlyAcidic",
+  "nitrogen": "high",
+  "phosphorous": "high",
+  "potassium": "high",
+  "soilType": "silt",
+  "organicMatter": "low",
+  "soilMoisture": "moderate",
+  "electricalConductivity": "moderate",
+  "preferedFertilizerType": "NPK",
+  "preferedApplicationMethod": "side-dressing",
+  "recommendations": {
+      "fertilizerType": "NPK",
+      "NPK": {
+          "ratio": "2:1:2",
+          "values": {
+              "N": "100",
+              "P": "50",
+              "K": "100"
+          },
+          "units": "kg/ha"
+      },
+      "applicationMode": "side-dressing",
+      "frequency": "every 4 weeks",
+      "reasoning": [
+          "Balances nutrient supply for good growth",
+          "Helps maintain steady growth in arid conditions"
+      ]
+  }
+},
+{
+  "cropType": "vegetable",
+  "growthStage": "flowering",
+  "yieldTarget": "high",
+  "fertilizerHistory": "high",
+  "waterRequirements": "variable",
+  "temperature": "veryHot",
+  "humidity": "extreme",
+  "rainfall": "high",
+  "season": "dry",
+  "location": "mountainous",
+  "pHLevel": "slightlyAcidic",
+  "nitrogen": "moderate",
+  "phosphorous": "low",
+  "potassium": "moderate",
+  "soilType": "silt",
+  "organicMatter": "low",
+  "soilMoisture": "high",
+  "electricalConductivity": "moderate",
+  "preferedFertilizerType": "slow-release",
+  "preferedApplicationMethod": "side-dressing",
+  "recommendations": {
+      "fertilizerType": "NPK",
+      "NPK": {
+          "ratio": "3:1:2",
+          "values": {
+              "N": "90",
+              "P": "30",
+              "K": "60"
+          },
+          "units": "kg/ha"
+      },
+      "applicationMode": "side-dressing",
+      "frequency": "every 3 weeks",
+      "reasoning": [
+          "The soil is low in organic matter and needs slow-release fertilizers.",
+          "Moderate nitrogen and potassium are required for flowering stage."
+      ]
+  }
+},
+{
+  "cropType": "tuber",
+  "growthStage": "fruiting",
+  "yieldTarget": "veryHigh",
+  "fertilizerHistory": "moderate",
+  "waterRequirements": "high",
+  "temperature": "hot",
+  "humidity": "moderate",
+  "rainfall": "veryHigh",
+  "season": "winter",
+  "location": "tropical",
+  "pHLevel": "slightlyAlkaline",
+  "nitrogen": "veryHigh",
+  "phosphorous": "high",
+  "potassium": "low",
+  "soilType": "clay",
+  "organicMatter": "veryHigh",
+  "soilMoisture": "veryHigh",
+  "electricalConductivity": "high",
+  "preferedFertilizerType": "NPK",
+  "preferedApplicationMethod": "broadcasting",
+  "recommendations": {
+      "fertilizerType": "NPK",
+      "NPK": {
+          "ratio": "4:2:1",
+          "values": {
+              "N": "120",
+              "P": "60",
+              "K": "30"
+          },
+          "units": "kg/ha"
+      },
+      "applicationMode": "broadcasting",
+      "frequency": "every 2 weeks",
+      "reasoning": [
+          "High nitrogen levels are needed for tuber development.",
+          "The soil is high in organic matter, but additional phosphorus will benefit tuber growth."
+      ]
+  }
+},
+{
+  "cropType": "vegetable",
+  "growthStage": "fruiting",
+  "yieldTarget": "moderate",
+  "fertilizerHistory": "moderate",
+  "waterRequirements": "veryHigh",
+  "temperature": "cool",
+  "humidity": "high",
+  "rainfall": "veryHigh",
+  "season": "winter",
+  "location": "arid",
+  "pHLevel": "alkaline",
+  "nitrogen": "moderate",
+  "phosphorous": "low",
+  "potassium": "high",
+  "soilType": "chalky",
+  "organicMatter": "moderate",
+  "soilMoisture": "veryHigh",
+  "electricalConductivity": "high",
+  "preferedFertilizerType": "compost",
+  "preferedApplicationMethod": "fertigation",
+  "recommendations": {
+      "fertilizerType": "compost",
+      "NPK": {
+          "ratio": "3:2:4",
+          "values": {
+              "N": "90",
+              "P": "60",
+              "K": "120"
+          },
+          "units": "kg/ha"
+      },
+      "applicationMode": "fertigation",
+      "frequency": "every 4 weeks",
+      "reasoning": [
+          "Compost provides organic nutrients to improve soil health and potassium levels.",
+          "The high rainfall and soil moisture necessitate regular fertigation to sustain growth."
+      ]
+  }
+},
+{
+  "cropType": "oilseed",
+  "growthStage": "harvest",
+  "yieldTarget": "high",
+  "fertilizerHistory": "none",
+  "waterRequirements": "high",
+  "temperature": "hot",
+  "humidity": "low",
+  "rainfall": "moderate",
+  "season": "wet",
+  "location": "arid",
+  "pHLevel": "slightlyAcidic",
+  "nitrogen": "low",
+  "phosphorous": "low",
+  "potassium": "high",
+  "soilType": "chalky",
+  "organicMatter": "moderate",
+  "soilMoisture": "veryHigh",
+  "electricalConductivity": "extreme",
+  "preferedFertilizerType": "compost",
+  "preferedApplicationMethod": "side-dressing",
+  "recommendations": {
+      "fertilizerType": "compost",
+      "NPK": {
+          "ratio": "2:1:2",
+          "values": {
+              "N": "60",
+              "P": "30",
+              "K": "60"
+          },
+          "units": "kg/ha"
+      },
+      "applicationMode": "side-dressing",
+      "frequency": "every 3 weeks",
+      "reasoning": [
+          "Compost is a suitable organic fertilizer for maintaining soil balance.",
+          "Due to low nitrogen and phosphorus, moderate NPK ratio is recommended."
+      ]
+  }
+},
+{
+  "cropType": "tuber",
+  "growthStage": "flowering",
+  "yieldTarget": "slightlyHigh",
+  "fertilizerHistory": "moderate",
+  "waterRequirements": "variable",
+  "temperature": "cold",
+  "humidity": "low",
+  "rainfall": "low",
+  "season": "dry",
+  "location": "arid",
+  "pHLevel": "alkaline",
+  "nitrogen": "high",
+  "phosphorous": "veryHigh",
+  "potassium": "high",
+  "soilType": "saline",
+  "organicMatter": "moderate",
+  "soilMoisture": "veryHigh",
+  "electricalConductivity": "moderate",
+  "preferedFertilizerType": "slow-release",
+  "preferedApplicationMethod": "fertigation",
+  "recommendations": {
+      "fertilizerType": "slow-release",
+      "NPK": {
+          "ratio": "5:3:4",
+          "values": {
+              "N": "150",
+              "P": "90",
+              "K": "120"
+          },
+          "units": "kg/ha"
+      },
+      "applicationMode": "fertigation",
+      "frequency": "every 3 weeks",
+      "reasoning": [
+          "High nitrogen and potassium are essential for flowering and early tuber growth.",
+          "Slow-release fertilizers minimize nutrient leaching in dry conditions."
+      ]
+  }
+},
+{
+  "cropType": "oilseed",
+  "growthStage": "flowering",
+  "yieldTarget": "veryHigh",
+  "fertilizerHistory": "none",
+  "waterRequirements": "high",
+  "temperature": "hot",
+  "humidity": "moderate",
+  "rainfall": "variable",
+  "season": "summer",
+  "location": "arid",
+  "pHLevel": "neutral",
+  "nitrogen": "low",
+  "phosphorous": "veryHigh",
+  "potassium": "veryHigh",
+  "soilType": "clay",
+  "organicMatter": "low",
+  "soilMoisture": "moderate",
+  "electricalConductivity": "high",
+  "preferedFertilizerType": "compost",
+  "preferedApplicationMethod": "broadcasting",
+  "recommendations": {
+      "fertilizerType": "organic",
+      "NPK": {
+          "ratio": "1:1:1",
+          "values": {
+              "N": "50",
+              "P": "50",
+              "K": "50"
+          },
+          "units": "kg/ha"
+      },
+      "applicationMode": "broadcasting",
+      "frequency": "monthly",
+      "reasoning": ["Requires a balanced fertilizer for healthy growth during flowering stage."]
+  }
+},
+{
+  "cropType": "legume",
+  "growthStage": "flowering",
+  "yieldTarget": "moderate",
+  "fertilizerHistory": "moderate",
+  "waterRequirements": "low",
+  "temperature": "veryHot",
+  "humidity": "low",
+  "rainfall": "low",
+  "season": "wet",
+  "location": "tropical",
+  "pHLevel": "neutral",
+  "nitrogen": "moderate",
+  "phosphorous": "moderate",
+  "potassium": "low",
+  "soilType": "loamy",
+  "organicMatter": "moderate",
+  "soilMoisture": "low",
+  "electricalConductivity": "moderate",
+  "preferedFertilizerType": "slow-release",
+  "preferedApplicationMethod": "side-dressing",
+  "recommendations": {
+      "fertilizerType": "slow-release",
+      "NPK": {
+          "ratio": "2:1:2",
+          "values": {
+              "N": "70",
+              "P": "35",
+              "K": "70"
+          },
+          "units": "kg/ha"
+      },
+      "applicationMode": "side-dressing",
+      "frequency": "every 6 weeks",
+      "reasoning": ["Legumes benefit from a slow-release fertilizer to maintain nutrient levels during flowering."]
+  }
+},
+{
+  "cropType": "vegetable",
+  "growthStage": "fruiting",
+  "yieldTarget": "moderate",
+  "fertilizerHistory": "high",
+  "waterRequirements": "moderate",
+  "temperature": "veryHot",
+  "humidity": "low",
+  "rainfall": "high",
+  "season": "summer",
+  "location": "temperate",
+  "pHLevel": "slightlyAlkaline",
+  "nitrogen": "moderate",
+  "phosphorous": "high",
+  "potassium": "high",
+  "soilType": "peat",
+  "organicMatter": "high",
+  "soilMoisture": "moderate",
+  "electricalConductivity": "high",
+  "preferedFertilizerType": "NPK",
+  "preferedApplicationMethod": "fertigation",
+  "recommendations": {
+      "fertilizerType": "NPK",
+      "NPK": {
+          "ratio": "4:2:5",
+          "values": {
+              "N": "90",
+              "P": "45",
+              "K": "112"
+          },
+          "units": "kg/ha"
+      },
+      "applicationMode": "fertigation",
+      "frequency": "weekly",
+      "reasoning": ["Vegetables during fruiting stage require a higher potassium ratio to support fruit development."]
+  }
+},
+{
+  "cropType": "oilseed",
+  "growthStage": "seedling",
+  "yieldTarget": "moderate",
+  "fertilizerHistory": "low",
+  "waterRequirements": "high",
+  "temperature": "hot",
+  "humidity": "moderate",
+  "rainfall": "moderate",
+  "season": "spring",
+  "location": "arid",
+  "pHLevel": "neutral",
+  "nitrogen": "moderate",
+  "phosphorous": "high",
+  "potassium": "moderate",
+  "soilType": "sandy",
+  "organicMatter": "low",
+  "soilMoisture": "moderate",
+  "electricalConductivity": "high",
+  "preferedFertilizerType": "organic",
+  "preferedApplicationMethod": "side-dressing",
+  "recommendations": {
+      "fertilizerType": "organic",
+      "NPK": {
+          "ratio": "2:1:2",
+          "values": {
+              "N": "60",
+              "P": "30",
+              "K": "60"
+          },
+          "units": "kg/ha"
+      },
+      "applicationMode": "side-dressing",
+      "frequency": "every 4 weeks",
+      "reasoning": ["Organic fertilizers enhance seedling growth while providing the necessary nutrients for early development."]
+  }
+},
+{
+  "cropType": "legume",
+  "growthStage": "vegetative",
+  "yieldTarget": "moderate",
+  "fertilizerHistory": "high",
+  "waterRequirements": "veryHigh",
+  "temperature": "moderate",
+  "humidity": "high",
+  "rainfall": "high",
+  "season": "wet",
+  "location": "tropical",
+  "pHLevel": "neutral",
+  "nitrogen": "high",
+  "phosphorous": "moderate",
+  "potassium": "high",
+  "soilType": "loamy",
+  "organicMatter": "moderate",
+  "soilMoisture": "high",
+  "electricalConductivity": "moderate",
+  "preferedFertilizerType": "NPK",
+  "preferedApplicationMethod": "broadcasting",
+  "recommendations": {
+      "fertilizerType": "NPK",
+      "NPK": {
+          "ratio": "2:1:2",
+          "values": {
+              "N": "70",
+              "P": "35",
+              "K": "70"
+          },
+          "units": "kg/ha"
+      },
+      "applicationMode": "broadcasting",
+      "frequency": "every 3 weeks",
+      "reasoning": ["Legumes at this stage require a balanced nutrient supply to support vegetative growth."]
+  }
+},
+{
+  "cropType": "fruit",
+  "growthStage": "mature",
+  "yieldTarget": "veryHigh",
+  "fertilizerHistory": "moderate",
+  "waterRequirements": "moderate",
+  "temperature": "moderate",
+  "humidity": "low",
+  "rainfall": "moderate",
+  "season": "summer",
+  "location": "temperate",
+  "pHLevel": "neutral",
+  "nitrogen": "high",
+  "phosphorous": "moderate",
+  "potassium": "veryHigh",
+  "soilType": "loamy",
+  "organicMatter": "moderate",
+  "soilMoisture": "moderate",
+  "electricalConductivity": "moderate",
+  "preferedFertilizerType": "NPK",
+  "preferedApplicationMethod": "drip irrigation",
+  "recommendations": {
+      "fertilizerType": "NPK",
+      "NPK": {
+          "ratio": "3:2:5",
+          "values": {
+              "N": "60",
+              "P": "40",
+              "K": "100"
+          },
+          "units": "kg/ha"
+      },
+      "applicationMode": "drip irrigation",
+      "frequency": "every 2 weeks",
+      "reasoning": ["Fruiting crops require high potassium to boost fruit size and quality."]
+  }
+},
+{
+  "cropType": "fruit",
+  "growthStage": "vegetative",
+  "yieldTarget": "high",
+  "fertilizerHistory": "low",
+  "waterRequirements": "veryHigh",
+  "temperature": "cold",
+  "humidity": "moderate",
+  "rainfall": "variable",
+  "season": "dry",
+  "location": "mountainous",
+  "pHLevel": "alkaline",
+  "nitrogen": "moderate",
+  "phosphorous": "moderate",
+  "potassium": "veryHigh",
+  "soilType": "clay",
+  "organicMatter": "moderate",
+  "soilMoisture": "high",
+  "electricalConductivity": "low",
+  "preferedFertilizerType": "slow-release",
+  "preferedApplicationMethod": "broadcasting",
+  "recommendations": {
+    "fertilizerType": "NPK",
+    "NPK": {
+      "ratio": "10-20-30",
+      "values": {
+        "N": "10",
+        "P": "20",
+        "K": "30"
+      },
+      "units": "kg/ha"
+    },
+    "applicationMode": "broadcasting",
+    "frequency": "every 3 months",
+    "reasoning": [
+      "Fruit crops require higher potassium for improved fruit quality and resistance to disease."
+    ]
+  }
+},
+{
+  "cropType": "tuber",
+  "growthStage": "seedling",
+  "yieldTarget": "veryHigh",
+  "fertilizerHistory": "none",
+  "waterRequirements": "veryHigh",
+  "temperature": "moderate",
+  "humidity": "low",
+  "rainfall": "high",
+  "season": "summer",
+  "location": "temperate",
+  "pHLevel": "slightlyAcidic",
+  "nitrogen": "high",
+  "phosphorous": "veryHigh",
+  "potassium": "low",
+  "soilType": "clay",
+  "organicMatter": "veryHigh",
+  "soilMoisture": "high",
+  "electricalConductivity": "moderate",
+  "preferedFertilizerType": "organic",
+  "preferedApplicationMethod": "side-dressing",
+  "recommendations": {
+    "fertilizerType": "Organic",
+    "NPK": {
+      "ratio": "5-15-10",
+      "values": {
+        "N": "5",
+        "P": "15",
+        "K": "10"
+      },
+      "units": "kg/ha"
+    },
+    "applicationMode": "side-dressing",
+    "frequency": "every 2 months",
+    "reasoning": [
+      "High phosphorous content promotes better root development in tuber crops."
+    ]
+  }
+},
+{
+  "cropType": "tuber",
+  "growthStage": "vegetative",
+  "yieldTarget": "slightlyHigh",
+  "fertilizerHistory": "none",
+  "waterRequirements": "low",
+  "temperature": "cold",
+  "humidity": "high",
+  "rainfall": "low",
+  "season": "spring",
+  "location": "tropical",
+  "pHLevel": "acidic",
+  "nitrogen": "veryHigh",
+  "phosphorous": "veryHigh",
+  "potassium": "low",
+  "soilType": "clay",
+  "organicMatter": "low",
+  "soilMoisture": "high",
+  "electricalConductivity": "moderate",
+  "preferedFertilizerType": "slow-release",
+  "preferedApplicationMethod": "side-dressing",
+  "recommendations": {
+    "fertilizerType": "NPK",
+    "NPK": {
+      "ratio": "20-20-20",
+      "values": {
+        "N": "20",
+        "P": "20",
+        "K": "20"
+      },
+      "units": "kg/ha"
+    },
+    "applicationMode": "side-dressing",
+    "frequency": "every 2 months",
+    "reasoning": [
+      "High nitrogen and phosphorous content supports healthy vegetative growth and tuber development."
+    ]
+  }
+},
+{
+  "cropType": "tuber",
+  "growthStage": "seedling",
+  "yieldTarget": "low",
+  "fertilizerHistory": "high",
+  "waterRequirements": "high",
+  "temperature": "veryHot",
+  "humidity": "high",
+  "rainfall": "high",
+  "season": "summer",
+  "location": "mountainous",
+  "pHLevel": "alkaline",
+  "nitrogen": "high",
+  "phosphorous": "low",
+  "potassium": "moderate",
+  "soilType": "clay",
+  "organicMatter": "low",
+  "soilMoisture": "moderate",
+  "electricalConductivity": "veryHigh",
+  "preferedFertilizerType": "organic",
+  "preferedApplicationMethod": "side-dressing",
+  "recommendations": {
+    "fertilizerType": "Organic",
+    "NPK": {
+      "ratio": "10-5-10",
+      "values": {
+        "N": "10",
+        "P": "5",
+        "K": "10"
+      },
+      "units": "kg/ha"
+    },
+    "applicationMode": "side-dressing",
+    "frequency": "every 3 months",
+    "reasoning": [
+      "Organic fertilizers support sustainable growth in high temperature and humid environments."
+    ]
+  }
+},
+{
+  "cropType": "vegetable",
+  "growthStage": "flowering",
+  "yieldTarget": "low",
+  "fertilizerHistory": "moderate",
+  "waterRequirements": "low",
+  "temperature": "hot",
+  "humidity": "extreme",
+  "rainfall": "veryHigh",
+  "season": "summer",
+  "location": "mountainous",
+  "pHLevel": "slightlyAlkaline",
+  "nitrogen": "veryHigh",
+  "phosphorous": "low",
+  "potassium": "moderate",
+  "soilType": "clay",
+  "organicMatter": "low",
+  "soilMoisture": "veryHigh",
+  "electricalConductivity": "veryHigh",
+  "preferedFertilizerType": "NPK",
+  "preferedApplicationMethod": "broadcasting",
+  "recommendations": {
+    "fertilizerType": "NPK",
+    "NPK": {
+      "ratio": "15-10-20",
+      "values": {
+        "N": "15",
+        "P": "10",
+        "K": "20"
+      },
+      "units": "kg/ha"
+    },
+    "applicationMode": "broadcasting",
+    "frequency": "every 2 months",
+    "reasoning": [
+      "Vegetables require balanced nitrogen, phosphorous, and potassium levels for healthy flowering in hot and extreme conditions."
+    ]
+  }
+},    
+{
+  "cropType": "oilseed",
+  "growthStage": "fruiting",
+  "yieldTarget": "veryHigh",
+  "fertilizerHistory": "none",
+  "waterRequirements": "veryHigh",
+  "temperature": "hot",
+  "humidity": "veryHigh",
+  "rainfall": "moderate",
+  "season": "autumn",
+  "location": "arid",
+  "pHLevel": "alkaline",
+  "nitrogen": "veryHigh",
+  "phosphorous": "low",
+  "potassium": "veryHigh",
+  "soilType": "sandy",
+  "organicMatter": "veryHigh",
+  "soilMoisture": "low",
+  "electricalConductivity": "veryHigh",
+  "preferedFertilizerType": "compost",
+  "preferedApplicationMethod": "side-dressing",
+  "recommendations": {
+      "fertilizerType": "compost",
+      "NPK": {
+          "ratio": "4:3:4",
+          "values": {
+              "N": "150",
+              "P": "50",
+              "K": "150"
+          },
+          "units": "kg/ha"
+      },
+      "applicationMode": "side-dressing",
+      "frequency": "once every 3 weeks",
+      "reasoning": [
+          "Oilseed plants in the fruiting stage require high levels of nitrogen and potassium to support vigorous fruit growth."
+      ]
+  }
+},
+{
+  "cropType": "oilseed",
+  "growthStage": "flowering",
+  "yieldTarget": "low",
+  "fertilizerHistory": "low",
+  "waterRequirements": "variable",
+  "temperature": "veryHot",
+  "humidity": "veryHigh",
+  "rainfall": "high",
+  "season": "wet",
+  "location": "mountainous",
+  "pHLevel": "neutral",
+  "nitrogen": "high",
+  "phosphorous": "moderate",
+  "potassium": "veryHigh",
+  "soilType": "peat",
+  "organicMatter": "low",
+  "soilMoisture": "moderate",
+  "electricalConductivity": "veryHigh",
+  "preferedFertilizerType": "slow-release",
+  "preferedApplicationMethod": "fertigation",
+  "recommendations": {
+      "fertilizerType": "slow-release",
+      "NPK": {
+          "ratio": "3:2:4",
+          "values": {
+              "N": "100",
+              "P": "67",
+              "K": "133"
+          },
+          "units": "kg/ha"
+      },
+      "applicationMode": "fertigation",
+      "frequency": "once every 2 weeks",
+      "reasoning": [
+          "Flowering oilseed crops require consistent feeding with a slow-release fertilizer to maintain nutrient availability during the flowering phase."
+      ]
+  }
+},
+{
+  "cropType": "vegetable",
+  "growthStage": "fruiting",
+  "yieldTarget": "low",
+  "fertilizerHistory": "high",
+  "waterRequirements": "variable",
+  "temperature": "hot",
+  "humidity": "veryHigh",
+  "rainfall": "high",
+  "season": "spring",
+  "location": "arid",
+  "pHLevel": "slightlyAlkaline",
+  "nitrogen": "low",
+  "phosphorous": "low",
+  "potassium": "high",
+  "soilType": "clay",
+  "organicMatter": "low",
+  "soilMoisture": "moderate",
+  "electricalConductivity": "high",
+  "preferedFertilizerType": "slow-release",
+  "preferedApplicationMethod": "fertigation",
+  "recommendations": {
+      "fertilizerType": "slow-release",
+      "NPK": {
+          "ratio": "4:1:3",
+          "values": {
+              "N": "80",
+              "P": "20",
+              "K": "60"
+          },
+          "units": "kg/ha"
+      },
+      "applicationMode": "fertigation",
+      "frequency": "once every 2 weeks",
+      "reasoning": [
+          "Vegetable crops in the fruiting stage need adequate potassium for fruit development, with a focus on consistent feeding through slow-release fertilizers."
+      ]
+  }
+},
+{
+  "cropType": "fruit",
+  "growthStage": "vegetative",
+  "yieldTarget": "low",
+  "fertilizerHistory": "low",
+  "waterRequirements": "veryHigh",
+  "temperature": "hot",
+  "humidity": "extreme",
+  "rainfall": "low",
+  "season": "winter",
+  "location": "arid",
+  "pHLevel": "acidic",
+  "nitrogen": "veryHigh",
+  "phosphorous": "low",
+  "potassium": "veryHigh",
+  "soilType": "sandy",
+  "organicMatter": "low",
+  "soilMoisture": "high",
+  "electricalConductivity": "low",
+  "preferedFertilizerType": "compost",
+  "preferedApplicationMethod": "fertigation",
+  "recommendations": {
+      "fertilizerType": "compost",
+      "NPK": {
+          "ratio": "3:2:5",
+          "values": {
+              "N": "120",
+              "P": "80",
+              "K": "200"
+          },
+          "units": "kg/ha"
+      },
+      "applicationMode": "fertigation",
+      "frequency": "once every month",
+      "reasoning": [
+          "Fruit crops in the vegetative stage require high levels of nitrogen for vegetative growth, with a focus on potassium for healthy root development."
+      ]
+  }
+},
+{
+  "cropType": "legume",
+  "growthStage": "seedling",
+  "yieldTarget": "moderate",
+  "fertilizerHistory": "none",
+  "waterRequirements": "high",
+  "temperature": "hot",
+  "humidity": "moderate",
+  "rainfall": "high",
+  "season": "dry",
+  "location": "temperate",
+  "pHLevel": "alkaline",
+  "nitrogen": "veryHigh",
+  "phosphorous": "veryHigh",
+  "potassium": "veryHigh",
+  "soilType": "sandy",
+  "organicMatter": "moderate",
+  "soilMoisture": "low",
+  "electricalConductivity": "extreme",
+  "preferedFertilizerType": "compost",
+  "preferedApplicationMethod": "fertigation",
+  "recommendations": {
+      "fertilizerType": "compost",
+      "NPK": {
+          "ratio": "4:3:4",
+          "values": {
+              "N": "150",
+              "P": "112",
+              "K": "150"
+          },
+          "units": "kg/ha"
+      },
+      "applicationMode": "fertigation",
+      "frequency": "every 3 weeks",
+      "reasoning": [
+          "Legumes in the seedling stage require nitrogen for initial growth, balanced by phosphorus and potassium to support root development."
+      ]
+  }
+},
+{
+  "cropType": "fruit",
+  "growthStage": "flowering",
+  "yieldTarget": "veryHigh",
+  "fertilizerHistory": "high",
+  "waterRequirements": "low",
+  "temperature": "moderate",
+  "humidity": "moderate",
+  "rainfall": "variable",
+  "season": "autumn",
+  "location": "temperate",
+  "pHLevel": "slightlyAcidic",
+  "nitrogen": "moderate",
+  "phosphorous": "moderate",
+  "potassium": "veryHigh",
+  "soilType": "sandy",
+  "organicMatter": "low",
+  "soilMoisture": "high",
+  "electricalConductivity": "low",
+  "preferedFertilizerType": "compost",
+  "preferedApplicationMethod": "broadcasting",
+  "recommendations": {
+      "fertilizerType": "compost",
+      "NPK": {
+          "ratio": "4:6:8",
+          "values": {
+              "N": 40,
+              "P": 60,
+              "K": 80
+          },
+          "units": "kg/ha"
+      },
+      "applicationMode": "broadcasting",
+      "frequency": "every 4-6 weeks",
+      "reasoning": ["Improve soil structure", "Increase potassium for fruit development"]
+  }
+},
+{
+  "cropType": "fruit",
+  "growthStage": "flowering",
+  "yieldTarget": "veryHigh",
+  "fertilizerHistory": "none",
+  "waterRequirements": "low",
+  "temperature": "hot",
+  "humidity": "high",
+  "rainfall": "variable",
+  "season": "dry",
+  "location": "temperate",
+  "pHLevel": "acidic",
+  "nitrogen": "low",
+  "phosphorous": "high",
+  "potassium": "low",
+  "soilType": "silt",
+  "organicMatter": "veryHigh",
+  "soilMoisture": "low",
+  "electricalConductivity": "veryHigh",
+  "preferedFertilizerType": "slow-release",
+  "preferedApplicationMethod": "side-dressing",
+  "recommendations": {
+      "fertilizerType": "slow-release",
+      "NPK": {
+          "ratio": "3:4:5",
+          "values": {
+              "N": 30,
+              "P": 40,
+              "K": 50
+          },
+          "units": "kg/ha"
+      },
+      "applicationMode": "side-dressing",
+      "frequency": "every 6 weeks",
+      "reasoning": ["Maintain steady nutrient supply", "Low nitrogen requirement"]
+  }
+},
+{
+  "cropType": "tuber",
+  "growthStage": "harvest",
+  "yieldTarget": "moderate",
+  "fertilizerHistory": "low",
+  "waterRequirements": "low",
+  "temperature": "hot",
+  "humidity": "moderate",
+  "rainfall": "veryHigh",
+  "season": "spring",
+  "location": "coastal",
+  "pHLevel": "acidic",
+  "nitrogen": "veryHigh",
+  "phosphorous": "moderate",
+  "potassium": "high",
+  "soilType": "sandy",
+  "organicMatter": "moderate",
+  "soilMoisture": "low",
+  "electricalConductivity": "veryHigh",
+  "preferedFertilizerType": "slow-release",
+  "preferedApplicationMethod": "side-dressing",
+  "recommendations": {
+      "fertilizerType": "slow-release",
+      "NPK": {
+          "ratio": "4:5:7",
+          "values": {
+              "N": 40,
+              "P": 50,
+              "K": 70
+          },
+          "units": "kg/ha"
+      },
+      "applicationMode": "side-dressing",
+      "frequency": "every 4-6 weeks",
+      "reasoning": ["High potassium need", "Sandy soil requires slow-release fertilizer"]
+  }
+},
+{
+  "cropType": "fruit",
+  "growthStage": "seedling",
+  "yieldTarget": "moderate",
+  "fertilizerHistory": "high",
+  "waterRequirements": "high",
+  "temperature": "cool",
+  "humidity": "moderate",
+  "rainfall": "veryHigh",
+  "season": "autumn",
+  "location": "coastal",
+  "pHLevel": "slightlyAcidic",
+  "nitrogen": "high",
+  "phosphorous": "low",
+  "potassium": "moderate",
+  "soilType": "clay",
+  "organicMatter": "moderate",
+  "soilMoisture": "veryHigh",
+  "electricalConductivity": "extreme",
+  "preferedFertilizerType": "compost",
+  "preferedApplicationMethod": "side-dressing",
+  "recommendations": {
+      "fertilizerType": "compost",
+      "NPK": {
+          "ratio": "5:3:6",
+          "values": {
+              "N": 50,
+              "P": 30,
+              "K": 60
+          },
+          "units": "kg/ha"
+      },
+      "applicationMode": "side-dressing",
+      "frequency": "every 6 weeks",
+      "reasoning": ["High nitrogen need for early growth", "Improved soil moisture retention with compost"]
+  }
+},
+{
+  "cropType": "legume",
+  "growthStage": "flowering",
+  "yieldTarget": "high",
+  "fertilizerHistory": "moderate",
+  "waterRequirements": "high",
+  "temperature": "hot",
+  "humidity": "high",
+  "rainfall": "veryHigh",
+  "season": "winter",
+  "location": "tropical",
+  "pHLevel": "acidic",
+  "nitrogen": "moderate",
+  "phosphorous": "veryHigh",
+  "potassium": "moderate",
+  "soilType": "clay",
+  "organicMatter": "veryHigh",
+  "soilMoisture": "veryHigh",
+  "electricalConductivity": "high",
+  "preferedFertilizerType": "compost",
+  "preferedApplicationMethod": "broadcasting",
+  "recommendations": {
+      "fertilizerType": "compost",
+      "NPK": {
+          "ratio": "4:5:5",
+          "values": {
+              "N": 40,
+              "P": 50,
+              "K": 50
+          },
+          "units": "kg/ha"
+      },
+      "applicationMode": "broadcasting",
+      "frequency": "every 4-6 weeks",
+      "reasoning": ["High organic matter in soil", "Adequate potassium and phosphorus for flowering"]
+  }
+},
+{
+  "cropType": "vegetable",
+  "growthStage": "flowering",
+  "yieldTarget": "high",
+  "fertilizerHistory": "none",
+  "waterRequirements": "moderate",
+  "temperature": "cool",
+  "humidity": "veryHigh",
+  "rainfall": "high",
+  "season": "winter",
+  "location": "arid",
+  "pHLevel": "neutral",
+  "nitrogen": "high",
+  "phosphorous": "moderate",
+  "potassium": "high",
+  "soilType": "sandy",
+  "organicMatter": "moderate",
+  "soilMoisture": "high",
+  "electricalConductivity": "low",
+  "preferedFertilizerType": "compost",
+  "preferedApplicationMethod": "broadcasting",
+  "recommendations": {
+      "fertilizerType": "compost",
+      "NPK": {
+          "ratio": "6:5:7",
+          "values": {
+              "N": 60,
+              "P": 50,
+              "K": 70
+          },
+          "units": "kg/ha"
+      },
+      "applicationMode": "broadcasting",
+      "frequency": "every 4-6 weeks",
+      "reasoning": ["High nitrogen for leaf growth", "Moderate potassium for fruiting"]
+  }
+},
+{
+  "cropType": "legume",
+  "growthStage": "seedling",
+  "yieldTarget": "veryHigh",
+  "fertilizerHistory": "low",
+  "waterRequirements": "variable",
+  "temperature": "moderate",
+  "humidity": "moderate",
+  "rainfall": "variable",
+  "season": "summer",
+  "location": "arid",
+  "pHLevel": "acidic",
+  "nitrogen": "veryHigh",
+  "phosphorous": "veryHigh",
+  "potassium": "low",
+  "soilType": "chalky",
+  "organicMatter": "moderate",
+  "soilMoisture": "moderate",
+  "electricalConductivity": "high",
+  "preferedFertilizerType": "compost",
+  "preferedApplicationMethod": "side-dressing",
+  "recommendations": {
+      "fertilizerType": "compost",
+      "NPK": {
+          "ratio": "5:5:3",
+          "values": {
+              "N": 50,
+              "P": 50,
+              "K": 30
+          },
+          "units": "kg/ha"
+      },
+      "applicationMode": "side-dressing",
+      "frequency": "every 6 weeks",
+      "reasoning": ["Very high nitrogen and phosphorus requirement"]
+  }
+},
+{
+  "cropType": "vegetable",
+  "growthStage": "flowering",
+  "yieldTarget": "high",
+  "fertilizerHistory": "moderate",
+  "waterRequirements": "veryHigh",
+  "temperature": "moderate",
+  "humidity": "high",
+  "rainfall": "low",
+  "season": "autumn",
+  "location": "tropical",
+  "pHLevel": "slightlyAcidic",
+  "nitrogen": "veryHigh",
+  "phosphorous": "veryHigh",
+  "potassium": "moderate",
+  "soilType": "clay",
+  "organicMatter": "moderate",
+  "soilMoisture": "low",
+  "electricalConductivity": "high",
+  "preferedFertilizerType": "slow-release",
+  "preferedApplicationMethod": "fertigation",
+  "recommendations": {
+      "fertilizerType": "slow-release",
+      "NPK": {
+          "ratio": "6:8:6",
+          "values": {
+              "N": 60,
+              "P": 80,
+              "K": 60
+          },
+          "units": "kg/ha"
+      },
+      "applicationMode": "fertigation",
+      "frequency": "every 6 weeks",
+      "reasoning": ["Steady nutrient supply", "Balanced nutrient requirements for flowering"]
+  }
+},
+{
+  "cropType": "fruit",
+  "growthStage": "seedling",
+  "yieldTarget": "veryHigh",
+  "fertilizerHistory": "high",
+  "waterRequirements": "low",
+  "temperature": "veryHot",
+  "humidity": "moderate",
+  "rainfall": "variable",
+  "season": "dry",
+  "location": "tropical",
+  "pHLevel": "neutral",
+  "nitrogen": "low",
+  "phosphorous": "low",
+  "potassium": "moderate",
+  "soilType": "clay",
+  "organicMatter": "low",
+  "soilMoisture": "low",
+  "electricalConductivity": "high",
+  "preferedFertilizerType": "NPK",
+  "preferedApplicationMethod": "fertigation",
+  "recommendations": {
+      "fertilizerType": "NPK",
+      "NPK": {
+          "ratio": "5:3:6",
+          "values": {
+              "N": 50,
+              "P": 30,
+              "K": 60
+          },
+          "units": "kg/ha"
+      },
+      "applicationMode": "fertigation",
+      "frequency": "every 6 weeks",
+      "reasoning": ["Low nitrogen and phosphorus in soil", "Adequate potassium for growth"]
+  }
+},
+{
+  "cropType": "oilseed",
+  "growthStage": "fruiting",
+  "yieldTarget": "low",
+  "fertilizerHistory": "high",
+  "waterRequirements": "high",
+  "temperature": "moderate",
+  "humidity": "high",
+  "rainfall": "veryHigh",
+  "season": "winter",
+  "location": "mountainous",
+  "pHLevel": "slightlyAcidic",
+  "nitrogen": "veryHigh",
+  "phosphorous": "veryHigh",
+  "potassium": "moderate",
+  "soilType": "loamy",
+  "organicMatter": "high",
+  "soilMoisture": "veryHigh",
+  "electricalConductivity": "veryHigh",
+  "preferedFertilizerType": "NPK",
+  "preferedApplicationMethod": "fertigation",
+  "recommendations": {
+      "fertilizerType": "NPK",
+      "NPK": {
+          "ratio": "6:6:4",
+          "values": {
+              "N": 60,
+              "P": 60,
+              "K": 40
+          },
+          "units": "kg/ha"
+      },
+      "applicationMode": "fertigation",
+      "frequency": "every 4-6 weeks",
+      "reasoning": ["High nitrogen for fruiting", "Balanced phosphorus and potassium"]
+  }
+},
+{
+  "cropType": "tuber",
+  "growthStage": "fruiting",
+  "yieldTarget": "veryHigh",
+  "fertilizerHistory": "moderate",
+  "waterRequirements": "high",
+  "temperature": "veryHot",
+  "humidity": "low",
+  "rainfall": "moderate",
+  "season": "dry",
+  "location": "tropical",
+  "pHLevel": "slightlyAlkaline",
+  "nitrogen": "veryHigh",
+  "phosphorous": "low",
+  "potassium": "veryHigh",
+  "soilType": "saline",
+  "organicMatter": "low",
+  "soilMoisture": "high",
+  "electricalConductivity": "low",
+  "preferedFertilizerType": "compost",
+  "preferedApplicationMethod": "fertigation",
+  "recommendations": {
+      "fertilizerType": "organic",
+      "NPK": {
+          "ratio": "1:2:3",
+          "values": {
+              "N": "100",
+              "P": "50",
+              "K": "150"
+          },
+          "units": "kg/ha"
+      },
+      "applicationMode": "fertigation",
+      "frequency": "every 2 weeks",
+      "reasoning": ["High nitrogen requirement for fruiting", "Low phosphorous in soil"]
+  }
+},
+{
+  "cropType": "fruit",
+  "growthStage": "seedling",
+  "yieldTarget": "moderate",
+  "fertilizerHistory": "high",
+  "waterRequirements": "variable",
+  "temperature": "hot",
+  "humidity": "extreme",
+  "rainfall": "variable",
+  "season": "autumn",
+  "location": "temperate",
+  "pHLevel": "slightlyAcidic",
+  "nitrogen": "high",
+  "phosphorous": "veryHigh",
+  "potassium": "moderate",
+  "soilType": "peat",
+  "organicMatter": "moderate",
+  "soilMoisture": "moderate",
+  "electricalConductivity": "moderate",
+  "preferedFertilizerType": "NPK",
+  "preferedApplicationMethod": "side-dressing",
+  "recommendations": {
+      "fertilizerType": "NPK",
+      "NPK": {
+          "ratio": "2:1:2",
+          "values": {
+              "N": "150",
+              "P": "75",
+              "K": "150"
+          },
+          "units": "kg/ha"
+      },
+      "applicationMode": "side-dressing",
+      "frequency": "every month",
+      "reasoning": ["High phosphorous for better root development", "Moderate potassium for balanced growth"]
+  }
+},
+{
+  "cropType": "oilseed",
+  "growthStage": "harvest",
+  "yieldTarget": "veryHigh",
+  "fertilizerHistory": "high",
+  "waterRequirements": "veryHigh",
+  "temperature": "cool",
+  "humidity": "moderate",
+  "rainfall": "moderate",
+  "season": "spring",
+  "location": "temperate",
+  "pHLevel": "slightlyAcidic",
+  "nitrogen": "low",
+  "phosphorous": "veryHigh",
+  "potassium": "veryHigh",
+  "soilType": "peat",
+  "organicMatter": "veryHigh",
+  "soilMoisture": "low",
+  "electricalConductivity": "veryHigh",
+  "preferedFertilizerType": "slow-release",
+  "preferedApplicationMethod": "fertigation",
+  "recommendations": {
+      "fertilizerType": "slow-release",
+      "NPK": {
+          "ratio": "1:2:2",
+          "values": {
+              "N": "50",
+              "P": "100",
+              "K": "100"
+          },
+          "units": "kg/ha"
+      },
+      "applicationMode": "fertigation",
+      "frequency": "every 3 weeks",
+      "reasoning": ["Slow-release to ensure nutrient availability during harvest", "High potassium and phosphorous requirement for seed development"]
+  }
+},
+{
+  "cropType": "fruit",
+  "growthStage": "vegetative",
+  "yieldTarget": "moderate",
+  "fertilizerHistory": "low",
+  "waterRequirements": "variable",
+  "temperature": "moderate",
+  "humidity": "moderate",
+  "rainfall": "high",
+  "season": "wet",
+  "location": "coastal",
+  "pHLevel": "slightlyAlkaline",
+  "nitrogen": "veryHigh",
+  "phosphorous": "veryHigh",
+  "potassium": "moderate",
+  "soilType": "saline",
+  "organicMatter": "veryHigh",
+  "soilMoisture": "low",
+  "electricalConductivity": "low",
+  "preferedFertilizerType": "NPK",
+  "preferedApplicationMethod": "fertigation",
+  "recommendations": {
+      "fertilizerType": "NPK",
+      "NPK": {
+          "ratio": "2:1:3",
+          "values": {
+              "N": "200",
+              "P": "100",
+              "K": "150"
+          },
+          "units": "kg/ha"
+      },
+      "applicationMode": "fertigation",
+      "frequency": "every 2 weeks",
+      "reasoning": ["High nitrogen for vegetative growth", "Very high phosphorous for root establishment"]
+  }
+},
+{
+  "cropType": "vegetable",
+  "growthStage": "flowering",
+  "yieldTarget": "low",
+  "fertilizerHistory": "low",
+  "waterRequirements": "high",
+  "temperature": "moderate",
+  "humidity": "high",
+  "rainfall": "variable",
+  "season": "spring",
+  "location": "tropical",
+  "pHLevel": "slightlyAlkaline",
+  "nitrogen": "veryHigh",
+  "phosphorous": "moderate",
+  "potassium": "low",
+  "soilType": "loamy",
+  "organicMatter": "veryHigh",
+  "soilMoisture": "low",
+  "electricalConductivity": "veryHigh",
+  "preferedFertilizerType": "NPK",
+  "preferedApplicationMethod": "fertigation",
+  "recommendations": {
+      "fertilizerType": "NPK",
+      "NPK": {
+          "ratio": "3:1:1",
+          "values": {
+              "N": "150",
+              "P": "50",
+              "K": "50"
+          },
+          "units": "kg/ha"
+      },
+      "applicationMode": "fertigation",
+      "frequency": "every month",
+      "reasoning": ["High nitrogen to promote flowering", "Low potassium in soil"]
+  }
+},
+{
+  "cropType": "tuber",
+  "growthStage": "seedling",
+  "yieldTarget": "low",
+  "fertilizerHistory": "none",
+  "waterRequirements": "moderate",
+  "temperature": "veryHot",
+  "humidity": "extreme",
+  "rainfall": "low",
+  "season": "spring",
+  "location": "arid",
+  "pHLevel": "acidic",
+  "nitrogen": "veryHigh",
+  "phosphorous": "moderate",
+  "potassium": "low",
+  "soilType": "saline",
+  "organicMatter": "high",
+  "soilMoisture": "veryHigh",
+  "electricalConductivity": "extreme",
+  "preferedFertilizerType": "organic",
+  "preferedApplicationMethod": "side-dressing",
+  "recommendations": {
+      "fertilizerType": "organic",
+      "NPK": {
+          "ratio": "1:1:1",
+          "values": {
+              "N": "100",
+              "P": "50",
+              "K": "50"
+          },
+          "units": "kg/ha"
+      },
+      "applicationMode": "side-dressing",
+      "frequency": "every 2 weeks",
+      "reasoning": ["Organic fertilizer to improve soil health", "High soil moisture helps nutrient uptake"]
+  }
+},
+{
+  "cropType": "tuber",
+  "growthStage": "seedling",
+  "yieldTarget": "low",
+  "fertilizerHistory": "high",
+  "waterRequirements": "high",
+  "temperature": "moderate",
+  "humidity": "high",
+  "rainfall": "variable",
+  "season": "winter",
+  "location": "temperate",
+  "pHLevel": "acidic",
+  "nitrogen": "veryHigh",
+  "phosphorous": "veryHigh",
+  "potassium": "low",
+  "soilType": "clay",
+  "organicMatter": "moderate",
+  "soilMoisture": "high",
+  "electricalConductivity": "extreme",
+  "preferedFertilizerType": "slow-release",
+  "preferedApplicationMethod": "broadcasting",
+  "recommendations": {
+      "fertilizerType": "slow-release",
+      "NPK": {
+          "ratio": "2:1:2",
+          "values": {
+              "N": "200",
+              "P": "100",
+              "K": "100"
+          },
+          "units": "kg/ha"
+      },
+      "applicationMode": "broadcasting",
+      "frequency": "every month",
+      "reasoning": ["Slow-release for continuous nutrient availability", "High nitrogen and phosphorous needs"]
+  }
+},
+{
+  "cropType": "fruit",
+  "growthStage": "fruiting",
+  "yieldTarget": "low",
+  "fertilizerHistory": "low",
+  "waterRequirements": "low",
+  "temperature": "hot",
+  "humidity": "low",
+  "rainfall": "low",
+  "season": "spring",
+  "location": "coastal",
+  "pHLevel": "neutral",
+  "nitrogen": "high",
+  "phosphorous": "high",
+  "potassium": "high",
+  "soilType": "clay",
+  "organicMatter": "low",
+  "soilMoisture": "veryHigh",
+  "electricalConductivity": "high",
+  "preferedFertilizerType": "organic",
+  "preferedApplicationMethod": "side-dressing",
+  "recommendations": {
+      "fertilizerType": "organic",
+      "NPK": {
+          "ratio": "1:1:1",
+          "values": {
+              "N": "100",
+              "P": "100",
+              "K": "100"
+          },
+          "units": "kg/ha"
+      },
+      "applicationMode": "side-dressing",
+      "frequency": "every 2 weeks",
+      "reasoning": ["Balanced NPK for fruit development", "Low organic matter requires organic fertilizer"]
+  }
+},
+{
+  "cropType": "fruit",
+  "growthStage": "seedling",
+  "yieldTarget": "slightlyHigh",
+  "fertilizerHistory": "moderate",
+  "waterRequirements": "variable",
+  "temperature": "cold",
+  "humidity": "extreme",
+  "rainfall": "high",
+  "season": "summer",
+  "location": "arid",
+  "pHLevel": "neutral",
+  "nitrogen": "moderate",
+  "phosphorous": "veryHigh",
+  "potassium": "moderate",
+  "soilType": "loamy",
+  "organicMatter": "high",
+  "soilMoisture": "high",
+  "electricalConductivity": "veryHigh",
+  "preferedFertilizerType": "slow-release",
+  "preferedApplicationMethod": "broadcasting",
+  "recommendations": {
+      "fertilizerType": "NPK",
+      "NPK": {
+          "ratio": "1:2:1",
+          "values": {
+              "N": "40",
+              "P": "80",
+              "K": "40"
+          },
+          "units": "kg/ha"
+      },
+      "applicationMode": "broadcasting",
+      "frequency": "monthly",
+      "reasoning": ["Improves root development and flowering."]
+  }
+},
+{
+  "cropType": "tuber",
+  "growthStage": "seedling",
+  "yieldTarget": "veryHigh",
+  "fertilizerHistory": "moderate",
+  "waterRequirements": "high",
+  "temperature": "cold",
+  "humidity": "low",
+  "rainfall": "variable",
+  "season": "dry",
+  "location": "arid",
+  "pHLevel": "alkaline",
+  "nitrogen": "low",
+  "phosphorous": "moderate",
+  "potassium": "veryHigh",
+  "soilType": "sandy",
+  "organicMatter": "high",
+  "soilMoisture": "high",
+  "electricalConductivity": "moderate",
+  "preferedFertilizerType": "NPK",
+  "preferedApplicationMethod": "broadcasting",
+  "recommendations": {
+      "fertilizerType": "NPK",
+      "NPK": {
+          "ratio": "2:1:2",
+          "values": {
+              "N": "60",
+              "P": "30",
+              "K": "60"
+          },
+          "units": "kg/ha"
+      },
+      "applicationMode": "broadcasting",
+      "frequency": "every 6 weeks",
+      "reasoning": ["Supports tuber enlargement and root health."]
+  }
+},
+{
+  "cropType": "vegetable",
+  "growthStage": "seedling",
+  "yieldTarget": "moderate",
+  "fertilizerHistory": "none",
+  "waterRequirements": "moderate",
+  "temperature": "cold",
+  "humidity": "low",
+  "rainfall": "low",
+  "season": "summer",
+  "location": "mountainous",
+  "pHLevel": "neutral",
+  "nitrogen": "moderate",
+  "phosphorous": "low",
+  "potassium": "veryHigh",
+  "soilType": "loamy",
+  "organicMatter": "low",
+  "soilMoisture": "moderate",
+  "electricalConductivity": "low",
+  "preferedFertilizerType": "organic",
+  "preferedApplicationMethod": "side-dressing",
+  "recommendations": {
+      "fertilizerType": "organic",
+      "NPK": {
+          "ratio": "2:3:1",
+          "values": {
+              "N": "50",
+              "P": "75",
+              "K": "25"
+          },
+          "units": "kg/ha"
+      },
+      "applicationMode": "side-dressing",
+      "frequency": "every 2 weeks",
+      "reasoning": ["Boosts root and shoot growth."]
+  }
+},
+{
+  "cropType": "vegetable",
+  "growthStage": "harvest",
+  "yieldTarget": "slightlyHigh",
+  "fertilizerHistory": "moderate",
+  "waterRequirements": "high",
+  "temperature": "cool",
+  "humidity": "veryHigh",
+  "rainfall": "low",
+  "season": "dry",
+  "location": "tropical",
+  "pHLevel": "neutral",
+  "nitrogen": "veryHigh",
+  "phosphorous": "high",
+  "potassium": "high",
+  "soilType": "saline",
+  "organicMatter": "veryHigh",
+  "soilMoisture": "moderate",
+  "electricalConductivity": "veryHigh",
+  "preferedFertilizerType": "NPK",
+  "preferedApplicationMethod": "broadcasting",
+  "recommendations": {
+      "fertilizerType": "NPK",
+      "NPK": {
+          "ratio": "3:2:2",
+          "values": {
+              "N": "90",
+              "P": "60",
+              "K": "60"
+          },
+          "units": "kg/ha"
+      },
+      "applicationMode": "broadcasting",
+      "frequency": "every 4 weeks",
+      "reasoning": ["Enhances fruit development and improves disease resistance."]
+  }
+},
+{
+  "cropType": "fruit",
+  "growthStage": "seedling",
+  "yieldTarget": "veryHigh",
+  "fertilizerHistory": "low",
+  "waterRequirements": "variable",
+  "temperature": "hot",
+  "humidity": "extreme",
+  "rainfall": "low",
+  "season": "dry",
+  "location": "coastal",
+  "pHLevel": "neutral",
+  "nitrogen": "veryHigh",
+  "phosphorous": "moderate",
+  "potassium": "low",
+  "soilType": "saline",
+  "organicMatter": "moderate",
+  "soilMoisture": "high",
+  "electricalConductivity": "moderate",
+  "preferedFertilizerType": "compost",
+  "preferedApplicationMethod": "broadcasting",
+  "recommendations": {
+      "fertilizerType": "compost",
+      "NPK": {
+          "ratio": "2:1:2",
+          "values": {
+              "N": "50",
+              "P": "25",
+              "K": "50"
+          },
+          "units": "kg/ha"
+      },
+      "applicationMode": "broadcasting",
+      "frequency": "monthly",
+      "reasoning": ["Improves soil structure and encourages root development."]
+  }
+},
+{
+  "cropType": "tuber",
+  "growthStage": "flowering",
+  "yieldTarget": "moderate",
+  "fertilizerHistory": "high",
+  "waterRequirements": "high",
+  "temperature": "moderate",
+  "humidity": "moderate",
+  "rainfall": "variable",
+  "season": "winter",
+  "location": "temperate",
+  "pHLevel": "slightlyAlkaline",
+  "nitrogen": "high",
+  "phosphorous": "moderate",
+  "potassium": "low",
+  "soilType": "chalky",
+  "organicMatter": "low",
+  "soilMoisture": "moderate",
+  "electricalConductivity": "extreme",
+  "preferedFertilizerType": "compost",
+  "preferedApplicationMethod": "side-dressing",
+  "recommendations": {
+      "fertilizerType": "compost",
+      "NPK": {
+          "ratio": "3:2:1",
+          "values": {
+              "N": "90",
+              "P": "60",
+              "K": "30"
+          },
+          "units": "kg/ha"
+      },
+      "applicationMode": "side-dressing",
+      "frequency": "every 3 weeks",
+      "reasoning": ["Promotes flowering and tuber development."]
+  }
+},
+{
+  "cropType": "vegetable",
+  "growthStage": "vegetative",
+  "yieldTarget": "slightlyHigh",
+  "fertilizerHistory": "high",
+  "waterRequirements": "low",
+  "temperature": "hot",
+  "humidity": "high",
+  "rainfall": "moderate",
+  "season": "wet",
+  "location": "temperate",
+  "pHLevel": "acidic",
+  "nitrogen": "moderate",
+  "phosphorous": "moderate",
+  "potassium": "low",
+  "soilType": "clay",
+  "organicMatter": "high",
+  "soilMoisture": "high",
+  "electricalConductivity": "high",
+  "preferedFertilizerType": "organic",
+  "preferedApplicationMethod": "fertigation",
+  "recommendations": {
+      "fertilizerType": "organic",
+      "NPK": {
+          "ratio": "2:3:1",
+          "values": {
+              "N": "50",
+              "P": "75",
+              "K": "25"
+          },
+          "units": "kg/ha"
+      },
+      "applicationMode": "fertigation",
+      "frequency": "every 2 weeks",
+      "reasoning": ["Helps maintain healthy plant growth and balanced nutrient supply."]
+  }
+},
+{
+  "cropType": "fruit",
+  "growthStage": "fruiting",
+  "yieldTarget": "moderate",
+  "fertilizerHistory": "high",
+  "waterRequirements": "low",
+  "temperature": "cold",
+  "humidity": "moderate",
+  "rainfall": "variable",
+  "season": "spring",
+  "location": "tropical",
+  "pHLevel": "alkaline",
+  "nitrogen": "moderate",
+  "phosphorous": "high",
+  "potassium": "veryHigh",
+  "soilType": "loamy",
+  "organicMatter": "low",
+  "soilMoisture": "high",
+  "electricalConductivity": "moderate",
+  "preferedFertilizerType": "compost",
+  "preferedApplicationMethod": "broadcasting",
+  "recommendations": {
+      "fertilizerType": "compost",
+      "NPK": {
+          "ratio": "2:2:3",
+          "values": {
+              "N": "60",
+              "P": "60",
+              "K": "90"
+          },
+          "units": "kg/ha"
+      },
+      "applicationMode": "broadcasting",
+      "frequency": "monthly",
+      "reasoning": ["Boosts fruit size and quality."]
+  }
+},
+{
+  "cropType": "tuber",
+  "growthStage": "harvest",
+  "yieldTarget": "high",
+  "fertilizerHistory": "none",
+  "waterRequirements": "moderate",
+  "temperature": "veryHot",
+  "humidity": "moderate",
+  "rainfall": "variable",
+  "season": "spring",
+  "location": "arid",
+  "pHLevel": "acidic",
+  "nitrogen": "high",
+  "phosphorous": "low",
+  "potassium": "low",
+  "soilType": "sandy",
+  "organicMatter": "low",
+  "soilMoisture": "high",
+  "electricalConductivity": "moderate",
+  "preferedFertilizerType": "organic",
+  "preferedApplicationMethod": "side-dressing",
+  "recommendations": {
+      "fertilizerType": "organic",
+      "NPK": {
+          "ratio": "2:1:2",
+          "values": {
+              "N": "60",
+              "P": "30",
+              "K": "60"
+          },
+          "units": "kg/ha"
+      },
+      "applicationMode": "side-dressing",
+      "frequency": "every 2 weeks",
+      "reasoning": ["Encourages tuber growth."]
+  }
+},
+{
+  "cropType": "fruit",
+  "growthStage": "fruiting",
+  "yieldTarget": "high",
+  "fertilizerHistory": "none",
+  "waterRequirements": "variable",
+  "temperature": "moderate",
+  "humidity": "low",
+  "rainfall": "veryHigh",
+  "season": "winter",
+  "location": "mountainous",
+  "pHLevel": "neutral",
+  "nitrogen": "veryHigh",
+  "phosphorous": "high",
+  "potassium": "veryHigh",
+  "soilType": "clay",
+  "organicMatter": "low",
+  "soilMoisture": "veryHigh",
+  "electricalConductivity": "extreme",
+  "preferedFertilizerType": "organic",
+  "preferedApplicationMethod": "side-dressing",
+  "recommendations": {
+      "fertilizerType": "organic",
+      "NPK": {
+          "ratio": "3:1:2",
+          "values": {
+              "N": "150",
+              "P": "50",
+              "K": "100"
+          },
+          "units": "kg/ha"
+      },
+      "applicationMode": "side-dressing",
+      "frequency": "every 2 weeks",
+      "reasoning": [
+          "Organic fertilizer is preferred for sustainability.",
+          "High nitrogen required to support fruiting."
+      ]
+  }
+},
+{
+  "cropType": "vegetable",
+  "growthStage": "fruiting",
+  "yieldTarget": "slightlyHigh",
+  "fertilizerHistory": "none",
+  "waterRequirements": "variable",
+  "temperature": "cool",
+  "humidity": "high",
+  "rainfall": "high",
+  "season": "wet",
+  "location": "coastal",
+  "pHLevel": "slightlyAcidic",
+  "nitrogen": "low",
+  "phosphorous": "veryHigh",
+  "potassium": "moderate",
+  "soilType": "silt",
+  "organicMatter": "moderate",
+  "soilMoisture": "veryHigh",
+  "electricalConductivity": "high",
+  "preferedFertilizerType": "slow-release",
+  "preferedApplicationMethod": "side-dressing",
+  "recommendations": {
+      "fertilizerType": "slow-release",
+      "NPK": {
+          "ratio": "4:5:3",
+          "values": {
+              "N": "100",
+              "P": "125",
+              "K": "75"
+          },
+          "units": "kg/ha"
+      },
+      "applicationMode": "side-dressing",
+      "frequency": "once a month",
+      "reasoning": [
+          "Slow-release fertilizer ensures sustained feeding during the wet season.",
+          "High phosphorus needed for flower and fruit production."
+      ]
+  }
+},
+{
+  "cropType": "vegetable",
+  "growthStage": "harvest",
+  "yieldTarget": "high",
+  "fertilizerHistory": "high",
+  "waterRequirements": "moderate",
+  "temperature": "moderate",
+  "humidity": "low",
+  "rainfall": "variable",
+  "season": "summer",
+  "location": "arid",
+  "pHLevel": "acidic",
+  "nitrogen": "veryHigh",
+  "phosphorous": "moderate",
+  "potassium": "veryHigh",
+  "soilType": "chalky",
+  "organicMatter": "moderate",
+  "soilMoisture": "low",
+  "electricalConductivity": "low",
+  "preferedFertilizerType": "slow-release",
+  "preferedApplicationMethod": "fertigation",
+  "recommendations": {
+      "fertilizerType": "slow-release",
+      "NPK": {
+          "ratio": "4:4:3",
+          "values": {
+              "N": "150",
+              "P": "150",
+              "K": "100"
+          },
+          "units": "kg/ha"
+      },
+      "applicationMode": "fertigation",
+      "frequency": "bi-weekly",
+      "reasoning": [
+          "Fertigation provides nutrients efficiently during the growing season.",
+          "High nitrogen and potassium are needed for a successful harvest."
+      ]
+  }
+},
+{
+  "cropType": "legume",
+  "growthStage": "flowering",
+  "yieldTarget": "moderate",
+  "fertilizerHistory": "none",
+  "waterRequirements": "moderate",
+  "temperature": "moderate",
+  "humidity": "extreme",
+  "rainfall": "low",
+  "season": "winter",
+  "location": "temperate",
+  "pHLevel": "alkaline",
+  "nitrogen": "moderate",
+  "phosphorous": "veryHigh",
+  "potassium": "veryHigh",
+  "soilType": "loamy",
+  "organicMatter": "veryHigh",
+  "soilMoisture": "low",
+  "electricalConductivity": "extreme",
+  "preferedFertilizerType": "compost",
+  "preferedApplicationMethod": "side-dressing",
+  "recommendations": {
+      "fertilizerType": "compost",
+      "NPK": {
+          "ratio": "2:3:4",
+          "values": {
+              "N": "80",
+              "P": "120",
+              "K": "160"
+          },
+          "units": "kg/ha"
+      },
+      "applicationMode": "side-dressing",
+      "frequency": "monthly",
+      "reasoning": [
+          "Compost improves soil structure and provides slow-release nutrients.",
+          "High potassium levels are crucial for flower and pod development."
+      ]
+  }
+},
+{
+  "cropType": "tuber",
+  "growthStage": "vegetative",
+  "yieldTarget": "moderate",
+  "fertilizerHistory": "none",
+  "waterRequirements": "low",
+  "temperature": "moderate",
+  "humidity": "extreme",
+  "rainfall": "variable",
+  "season": "winter",
+  "location": "mountainous",
+  "pHLevel": "acidic",
+  "nitrogen": "veryHigh",
+  "phosphorous": "high",
+  "potassium": "low",
+  "soilType": "sandy",
+  "organicMatter": "low",
+  "soilMoisture": "low",
+  "electricalConductivity": "moderate",
+  "preferedFertilizerType": "NPK",
+  "preferedApplicationMethod": "broadcasting",
+  "recommendations": {
+      "fertilizerType": "NPK",
+      "NPK": {
+          "ratio": "3:1:2",
+          "values": {
+              "N": "120",
+              "P": "40",
+              "K": "60"
+          },
+          "units": "kg/ha"
+      },
+      "applicationMode": "broadcasting",
+      "frequency": "every 6 weeks",
+      "reasoning": [
+          "NPK fertilizer ensures balanced nutrition for tuber growth.",
+          "High nitrogen levels are required for vegetative growth."
+      ]
+  }
+},
+{
+  "cropType": "legume",
+  "growthStage": "seedling",
+  "yieldTarget": "high",
+  "fertilizerHistory": "moderate",
+  "waterRequirements": "moderate",
+  "temperature": "moderate",
+  "humidity": "veryHigh",
+  "rainfall": "variable",
+  "season": "autumn",
+  "location": "tropical",
+  "pHLevel": "slightlyAcidic",
+  "nitrogen": "veryHigh",
+  "phosphorous": "low",
+  "potassium": "low",
+  "soilType": "clay",
+  "organicMatter": "moderate",
+  "soilMoisture": "high",
+  "electricalConductivity": "moderate",
+  "preferedFertilizerType": "compost",
+  "preferedApplicationMethod": "side-dressing",
+  "recommendations": {
+      "fertilizerType": "compost",
+      "NPK": {
+          "ratio": "2:1:2",
+          "values": {
+              "N": "200",
+              "P": "100",
+              "K": "200"
+          },
+          "units": "kg/ha"
+      },
+      "applicationMode": "side-dressing",
+      "frequency": "monthly",
+      "reasoning": [
+          "Compost enhances soil fertility and provides micronutrients.",
+          "High nitrogen is crucial for seedling development."
+      ]
+  }
+},
+{
+  "cropType": "tuber",
+  "growthStage": "flowering",
+  "yieldTarget": "veryHigh",
+  "fertilizerHistory": "high",
+  "waterRequirements": "moderate",
+  "temperature": "veryHot",
+  "humidity": "high",
+  "rainfall": "variable",
+  "season": "wet",
+  "location": "temperate",
+  "pHLevel": "neutral",
+  "nitrogen": "high",
+  "phosphorous": "veryHigh",
+  "potassium": "moderate",
+  "soilType": "peat",
+  "organicMatter": "moderate",
+  "soilMoisture": "high",
+  "electricalConductivity": "moderate",
+  "preferedFertilizerType": "NPK",
+  "preferedApplicationMethod": "broadcasting",
+  "recommendations": {
+      "fertilizerType": "NPK",
+      "NPK": {
+          "ratio": "3:4:2",
+          "values": {
+              "N": "180",
+              "P": "240",
+              "K": "120"
+          },
+          "units": "kg/ha"
+      },
+      "applicationMode": "broadcasting",
+      "frequency": "every 3 weeks",
+      "reasoning": [
+          "Balanced NPK fertilization ensures optimal growth during flowering.",
+          "High phosphorus levels support flowering and tuber formation."
+      ]
+  }
+},
+{
+  "cropType": "fruit",
+  "growthStage": "seedling",
+  "yieldTarget": "low",
+  "fertilizerHistory": "none",
+  "waterRequirements": "low",
+  "temperature": "hot",
+  "humidity": "extreme",
+  "rainfall": "veryHigh",
+  "season": "dry",
+  "location": "tropical",
+  "pHLevel": "neutral",
+  "nitrogen": "high",
+  "phosphorous": "high",
+  "potassium": "high",
+  "soilType": "loamy",
+  "organicMatter": "high",
+  "soilMoisture": "moderate",
+  "electricalConductivity": "veryHigh",
+  "preferedFertilizerType": "NPK",
+  "preferedApplicationMethod": "side-dressing",
+  "recommendations": {
+      "fertilizerType": "NPK",
+      "NPK": {
+          "ratio": "2:3:4",
+          "values": {
+              "N": "100",
+              "P": "150",
+              "K": "200"
+          },
+          "units": "kg/ha"
+      },
+      "applicationMode": "side-dressing",
+      "frequency": "monthly",
+      "reasoning": [
+          "NPK provides all the necessary nutrients during the early growth stage.",
+          "High potassium and phosphorus help with seedling establishment."
+      ]
+  }
+},
+{
+  "cropType": "fruit",
+  "growthStage": "flowering",
+  "yieldTarget": "high",
+  "fertilizerHistory": "moderate",
+  "waterRequirements": "veryHigh",
+  "temperature": "cool",
+  "humidity": "low",
+  "rainfall": "variable",
+  "season": "dry",
+  "location": "tropical",
+  "pHLevel": "slightlyAcidic",
+  "nitrogen": "moderate",
+  "phosphorous": "high",
+  "potassium": "high",
+  "soilType": "sandy",
+  "organicMatter": "moderate",
+  "soilMoisture": "veryHigh",
+  "electricalConductivity": "moderate",
+  "preferedFertilizerType": "organic",
+  "preferedApplicationMethod": "side-dressing",
+  "recommendations": {
+      "fertilizerType": "organic",
+      "NPK": {
+          "ratio": "3:2:3",
+          "values": {
+              "N": "120",
+              "P": "80",
+              "K": "120"
+          },
+          "units": "kg/ha"
+      },
+      "applicationMode": "side-dressing",
+      "frequency": "every 3 weeks",
+      "reasoning": [
+          "Organic fertilizers improve soil health over time.",
+          "Balanced NPK is required for effective flowering and fruiting."
+      ]
+  }
+},
+{
+        "cropType": "fruit",
+        "growthStage": "harvest",
+        "yieldTarget": "low",
+        "fertilizerHistory": "none",
+        "waterRequirements": "variable",
+        "temperature": "hot",
+        "humidity": "moderate",
+        "rainfall": "veryHigh",
+        "season": "winter",
+        "location": "temperate",
+        "pHLevel": "slightlyAcidic",
+        "nitrogen": "veryHigh",
+        "phosphorous": "high",
+        "potassium": "high",
+        "soilType": "clay",
+        "organicMatter": "moderate",
+        "soilMoisture": "veryHigh",
+        "electricalConductivity": "extreme",
+        "preferedFertilizerType": "organic",
+        "preferedApplicationMethod": "fertigation",
+        "recommendations": {
+            "fertilizerType": "organic",
+            "NPK": {
+                "ratio": "1:2:2",
+                "values": {
+                    "N": "50",
+                    "P": "100",
+                    "K": "100"
+                },
+                "units": "kg/ha"
+            },
+            "applicationMode": "fertigation",
+            "frequency": "monthly",
+            "reasoning": ["To improve growth and increase yield"]
+        }
+    },
+    {
+        "cropType": "fruit",
+        "growthStage": "harvest",
+        "yieldTarget": "high",
+        "fertilizerHistory": "moderate",
+        "waterRequirements": "low",
+        "temperature": "moderate",
+        "humidity": "low",
+        "rainfall": "veryHigh",
+        "season": "summer",
+        "location": "mountainous",
+        "pHLevel": "slightlyAcidic",
+        "nitrogen": "low",
+        "phosphorous": "veryHigh",
+        "potassium": "low",
+        "soilType": "sandy",
+        "organicMatter": "veryHigh",
+        "soilMoisture": "veryHigh",
+        "electricalConductivity": "moderate",
+        "preferedFertilizerType": "NPK",
+        "preferedApplicationMethod": "side-dressing",
+        "recommendations": {
+            "fertilizerType": "NPK",
+            "NPK": {
+                "ratio": "1:2:1",
+                "values": {
+                    "N": "60",
+                    "P": "120",
+                    "K": "60"
+                },
+                "units": "kg/ha"
+            },
+            "applicationMode": "side-dressing",
+            "frequency": "monthly",
+            "reasoning": ["To provide balanced nutrients for high yield"]
+        }
+    },
+    {
+        "cropType": "fruit",
+        "growthStage": "vegetative",
+        "yieldTarget": "veryHigh",
+        "fertilizerHistory": "moderate",
+        "waterRequirements": "high",
+        "temperature": "moderate",
+        "humidity": "high",
+        "rainfall": "low",
+        "season": "dry",
+        "location": "arid",
+        "pHLevel": "slightlyAcidic",
+        "nitrogen": "veryHigh",
+        "phosphorous": "low",
+        "potassium": "veryHigh",
+        "soilType": "chalky",
+        "organicMatter": "high",
+        "soilMoisture": "moderate",
+        "electricalConductivity": "extreme",
+        "preferedFertilizerType": "organic",
+        "preferedApplicationMethod": "side-dressing",
+        "recommendations": {
+            "fertilizerType": "organic",
+            "NPK": {
+                "ratio": "2:1:2",
+                "values": {
+                    "N": "100",
+                    "P": "50",
+                    "K": "100"
+                },
+                "units": "kg/ha"
+            },
+            "applicationMode": "side-dressing",
+            "frequency": "bi-weekly",
+            "reasoning": ["To enhance vegetative growth and ensure high yields"]
+        }
+    },
+    {
+        "cropType": "legume",
+        "growthStage": "fruiting",
+        "yieldTarget": "veryHigh",
+        "fertilizerHistory": "low",
+        "waterRequirements": "low",
+        "temperature": "veryHot",
+        "humidity": "high",
+        "rainfall": "high",
+        "season": "spring",
+        "location": "mountainous",
+        "pHLevel": "slightlyAcidic",
+        "nitrogen": "low",
+        "phosphorous": "veryHigh",
+        "potassium": "low",
+        "soilType": "silt",
+        "organicMatter": "veryHigh",
+        "soilMoisture": "moderate",
+        "electricalConductivity": "high",
+        "preferedFertilizerType": "slow-release",
+        "preferedApplicationMethod": "side-dressing",
+        "recommendations": {
+            "fertilizerType": "slow-release",
+            "NPK": {
+                "ratio": "1:2:1",
+                "values": {
+                    "N": "50",
+                    "P": "100",
+                    "K": "50"
+                },
+                "units": "kg/ha"
+            },
+            "applicationMode": "side-dressing",
+            "frequency": "monthly",
+            "reasoning": ["To gradually provide essential nutrients for fruiting"]
+        }
+    },
+    {
+        "cropType": "fruit",
+        "growthStage": "harvest",
+        "yieldTarget": "low",
+        "fertilizerHistory": "high",
+        "waterRequirements": "moderate",
+        "temperature": "moderate",
+        "humidity": "extreme",
+        "rainfall": "moderate",
+        "season": "winter",
+        "location": "arid",
+        "pHLevel": "slightlyAcidic",
+        "nitrogen": "moderate",
+        "phosphorous": "veryHigh",
+        "potassium": "moderate",
+        "soilType": "saline",
+        "organicMatter": "veryHigh",
+        "soilMoisture": "high",
+        "electricalConductivity": "moderate",
+        "preferedFertilizerType": "NPK",
+        "preferedApplicationMethod": "fertigation",
+        "recommendations": {
+            "fertilizerType": "NPK",
+            "NPK": {
+                "ratio": "1:2:1",
+                "values": {
+                    "N": "60",
+                    "P": "120",
+                    "K": "60"
+                },
+                "units": "kg/ha"
+            },
+            "applicationMode": "fertigation",
+            "frequency": "bi-weekly",
+            "reasoning": ["To replenish soil nutrients and promote healthy growth"]
+        }
+    },
+    {
+        "cropType": "legume",
+        "growthStage": "fruiting",
+        "yieldTarget": "veryHigh",
+        "fertilizerHistory": "low",
+        "waterRequirements": "veryHigh",
+        "temperature": "cold",
+        "humidity": "high",
+        "rainfall": "low",
+        "season": "summer",
+        "location": "coastal",
+        "pHLevel": "slightlyAlkaline",
+        "nitrogen": "veryHigh",
+        "phosphorous": "high",
+        "potassium": "low",
+        "soilType": "silt",
+        "organicMatter": "veryHigh",
+        "soilMoisture": "low",
+        "electricalConductivity": "extreme",
+        "preferedFertilizerType": "compost",
+        "preferedApplicationMethod": "side-dressing",
+        "recommendations": {
+            "fertilizerType": "compost",
+            "NPK": {
+                "ratio": "2:2:1",
+                "values": {
+                    "N": "100",
+                    "P": "100",
+                    "K": "50"
+                },
+                "units": "kg/ha"
+            },
+            "applicationMode": "side-dressing",
+            "frequency": "monthly",
+            "reasoning": ["To improve soil fertility and plant growth"]
+        }
+    }
+]
+  }
+}
