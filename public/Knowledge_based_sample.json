@@ -1,0 +1,39 @@
+{
+    "knowledgeBase": {
+      "fertilizerRecommendations": {
+        "rules": [
+          {
+            "conditions": {
+              "cropType": "",
+              "growthStage": "",
+              "yieldTarget": {},
+              "nitrogen": {},
+              "phosphorous": {},
+              "potassium": {},
+              "pHLevel": {}
+            },
+            "recommendations": {
+              "fertilizerType": "NPK 10-20-10",
+              "NPK": {
+                "ratio": "1:2:1",
+                "values": {
+                  "N": 80,
+                  "P": 160,
+                  "K": 80
+                },
+                "units": "kg/ha"
+              },
+              "applicationMode": "Top dressing",
+              "frequency": "Two applications, 4 weeks apart",
+              "reasoning": [
+                "High N demand during vegetative growth, supplemented by P for root development and K for overall plant health.",
+                "Low soil NPK requires higher application."
+              ] 
+            }
+          }
+        ]
+      }
+    }
+  }
+  
+  
