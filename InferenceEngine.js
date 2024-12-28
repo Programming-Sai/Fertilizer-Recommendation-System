@@ -1,6 +1,8 @@
+import { BASE_PATH } from "./BasePath";
+
 async function loadKnowledgeBase() {
   try {
-    const response = await fetch("/Knowledge_based_sample.json");
+    const response = await fetch(`${BASE_PATH}/Knowledge_based_sample.json`);
     if (!response.ok) {
       throw new Error("Failed to load the knowledge base.");
     }
