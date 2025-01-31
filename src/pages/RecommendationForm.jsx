@@ -32,8 +32,8 @@ function RecommendationForm() {
     soilMoisture: null,
     electricalConductivity: null,
 
-    preferedFertilizerType: null,
-    preferedApplicationMethod: null,
+    // preferedFertilizerType: null,
+    // preferedApplicationMethod: null,
 
     // cropType: "cereal",
     // growthStage: "vegetative",
@@ -93,11 +93,11 @@ function RecommendationForm() {
       updateFields={updateFields}
       setFilledForm={setFilledForm}
     />,
-    <FarmersInput
-      {...formData}
-      updateFields={updateFields}
-      setFilledForm={setFilledForm}
-    />,
+    // <FarmersInput
+    //   {...formData}
+    //   updateFields={updateFields}
+    //   setFilledForm={setFilledForm}
+    // />,
   ]);
 
   const handleSubmit = (e) => {

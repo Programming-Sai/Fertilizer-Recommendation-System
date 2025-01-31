@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
-import html2canvas from "html2canvas";
 import jsPDF from "jspdf";
 import "./Results.css";
-import inferRecommendations from "../../InferenceEngine";
 
 function Results() {
   const location = useLocation();
@@ -13,13 +11,30 @@ function Results() {
 
   useEffect(() => {
     const fetchRecommendations = async () => {
-      const result = await inferRecommendations(formData);
-      setRecommendations(result);
+      const queryParams = new URLSearchParams(formData).toString();
+      const url = `http://localhost:5000/recommend?${queryParams}`;
+      console.log("Url: ", url);
+      try {
+        const response = await fetch(url, {
+          method: "GET",
+          headers: { "Content-Type": "application/json" },
+        });
+
+        if (!response.ok) {
+          throw new Error("Failed to fetch recommendations.");
+        }
+
+        const data = await response.json();
+        setRecommendations(data.recommendation);
+      } catch (error) {
+        console.error("Error fetching recommendations:", error);
+      }
     };
 
     if (formData) {
       fetchRecommendations();
     }
+    console.log("\nFormData: ", formData, "\nResult: ", recommendations);
   }, [formData]);
 
   const handleDownload = () => {
