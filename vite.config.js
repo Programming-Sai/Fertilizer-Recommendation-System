@@ -5,4 +5,8 @@ import { BASE_PATH } from "./BasePath";
 export default defineConfig({
   plugins: [react()],
   base: `${BASE_PATH}/`,
+  server: {
+    port: 3000,
+    host: true,
+  },
 });
