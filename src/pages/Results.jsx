@@ -14,7 +14,7 @@ function Results() {
   useEffect(() => {
     const fetchRecommendations = async () => {
       const queryParams = new URLSearchParams(formData).toString();
-      const url = `http://localhost:5000/recommend?${queryParams}`;
+      const url = `http://backend:5000/recommend?${queryParams}`;
       console.log("Url: ", url);
       try {
         const response = await fetch(url, {
