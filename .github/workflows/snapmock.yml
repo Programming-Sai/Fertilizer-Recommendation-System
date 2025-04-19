@@ -2,7 +2,7 @@ name: Run SnapMock
 
 on:
   schedule:
-    - cron: "0 0 * * *"  # Every day at midnight
+    - cron: "0 0 * * *"  # Every day at midnigts
   push:
     branches: [main]
   workflow_dispatch:
