@@ -23,29 +23,27 @@ jobs:
           echo "Current Directory:"
           pwd  # Print the current directory
 
+      - name: Ensure snapshots directory exists
+        run: |
+          mkdir -p ${{ github.workspace }}/snapshots  # Ensure the directory exists before SnapMock
 
       - name: Run SnapMock
-        uses: Programming-Sai/SnapMock@main  # This will automatically pull the latest v1 commit
+        uses: Programming-Sai/SnapMock@main
         with:
           url: "https://programming-sai.github.io/Fertilizer-Recommendation-System/"
           devices: "laptop"
-          output: "snapshots"
+          output: "${{ github.workspace }}/snapshots"  # Correctly output to the snapshots directory
 
       - name: Debug snapshot output
         run: |
           echo "Snapshot output contents:"
-          ls -R ./snapshots || echo "No snapshots directory found"
-
-      - name: Move SnapMock screenshots to workspace
-        run: |
-          mkdir -p ${{ github.workspace }}/snapshots
-          cp -r ${{ github.action_path }}/snapshots/* ${{ github.workspace }}/snapshots/
+          ls -R ${{ github.workspace }}/snapshots || echo "No snapshots directory found"  # Debug if snapshots are present
 
       - name: Deploy to Custom Branch
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./snapshots
+          publish_dir: ${{ github.workspace }}/snapshots  # Correctly use the directory with the snapshots
           publish_branch: snapmock-output  # User-specified branch
           commit_message: "Update SnapMock screenshots [skip ci]"
         env:
