@@ -22,7 +22,7 @@ jobs:
 
 
       - name: Run SnapMock
-        uses: Programming-Sai/SnapMock@v1  # This will automatically pull the latest v1 commit
+        uses: Programming-Sai/SnapMock@main  # This will automatically pull the latest v1 commit
         with:
           url: "https://programming-sai.github.io/Fertilizer-Recommendation-System/"
           devices: "laptop"
