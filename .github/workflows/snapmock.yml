@@ -15,6 +15,12 @@ jobs:
       - name: Checkout Repo
         uses: actions/checkout@v3
 
+      - name: Check current directory
+        run: |
+          echo "Current Directory:"
+          pwd  # Print the current directory
+
+
       - name: Run SnapMock
         uses: Programming-Sai/SnapMock@v1  # This will automatically pull the latest v1 commit
         with:
