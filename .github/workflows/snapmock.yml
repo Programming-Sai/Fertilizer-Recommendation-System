@@ -36,6 +36,11 @@ jobs:
           echo "Snapshot output contents:"
           ls -R ./snapshots || echo "No snapshots directory found"
 
+      - name: Move SnapMock screenshots to workspace
+        run: |
+          mkdir -p ${{ github.workspace }}/snapshots
+          cp -r ${{ github.action_path }}/snapshots/* ${{ github.workspace }}/snapshots/
+
       - name: Deploy to Custom Branch
         uses: peaceiris/actions-gh-pages@v3
         with:
