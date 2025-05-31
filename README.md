@@ -1,5 +1,18 @@
 # Fertilizer Recommendation System - Expert System
 
+<div align='center'>
+
+<picture>
+  <source srcset="https://raw.githubusercontent.com/Programming-SaiFertilizer-Recommendation-System/snapmock-output/output_laptop.png" media="(prefers-color-scheme: dark)" />
+  <source srcset="https://raw.githubusercontent.com/Programming-Sai/Fertilizer-Recommendation-System/snapmock-output/output_laptop.png" media="(prefers-color-scheme: light)" />
+  <img src="https://raw.githubusercontent.com/Programming-Sai/Fertilizer-Recommendation-System/snapmock-output/output_laptop.png" alt="Fertilizer Recomendation System Site Preview" />
+</picture>
+</div>
+
+<br>
+<br>
+
+
 ## Project Overview
 
 The **Fertilizer Recommendation System** is an expert system designed to recommend fertilizer mixes based on soil and crop analysis. This system processes input data from users, performs inference logic using an engine, and provides personalized fertilizer recommendations, including the necessary amounts of Nitrogen (N), Phosphorus (P), and Potassium (K), as well as a suitable fertilizer type and application plan.
