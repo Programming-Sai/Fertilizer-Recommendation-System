@@ -1,13 +1,14 @@
 # Fertilizer Recommendation System - Expert System
 
 <div align='center'>
-
-<picture>
-  <source srcset="https://raw.githubusercontent.com/Programming-Sai/Fertilizer-Recommendation-System/snapmock-output/output_laptop.png" media="(prefers-color-scheme: dark)" />
-  <source srcset="https://raw.githubusercontent.com/Programming-Sai/Fertilizer-Recommendation-System/snapmock-output/output_laptop.png" media="(prefers-color-scheme: light)" />
-  <img src="https://raw.githubusercontent.com/Programming-Sai/Fertilizer-Recommendation-System/snapmock-output/output_laptop.png" alt="Fertilizer Recomendation System Site Preview" />
-</picture>
-</div>
+<a href="https://programming-sai.github.io/Fertilizer-Recommendation-System/" target="_blank" rel="noopener noreferrer">
+  <picture>
+    <source srcset="https://raw.githubusercontent.com/Programming-Sai/Fertilizer-Recommendation-System/snapmock-output/output_laptop.png" media="(prefers-color-scheme: dark)" />
+    <source srcset="https://raw.githubusercontent.com/Programming-Sai/Fertilizer-Recommendation-System/snapmock-output/output_laptop.png" media="(prefers-color-scheme: light)" />
+    <img src="https://raw.githubusercontent.com/Programming-Sai/Fertilizer-Recommendation-System/snapmock-output/output_laptop.png" alt="Fertilizer Recomendation System Site Preview" />
+  </picture>
+  </div>
+</a>
 
 <br>
 <br>
