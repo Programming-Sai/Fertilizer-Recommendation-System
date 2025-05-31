@@ -3,7 +3,7 @@
 <div align='center'>
 
 <picture>
-  <source srcset="https://raw.githubusercontent.com/Programming-SaiFertilizer-Recommendation-System/snapmock-output/output_laptop.png" media="(prefers-color-scheme: dark)" />
+  <source srcset="https://raw.githubusercontent.com/Programming-Sai/Fertilizer-Recommendation-System/snapmock-output/output_laptop.png" media="(prefers-color-scheme: dark)" />
   <source srcset="https://raw.githubusercontent.com/Programming-Sai/Fertilizer-Recommendation-System/snapmock-output/output_laptop.png" media="(prefers-color-scheme: light)" />
   <img src="https://raw.githubusercontent.com/Programming-Sai/Fertilizer-Recommendation-System/snapmock-output/output_laptop.png" alt="Fertilizer Recomendation System Site Preview" />
 </picture>
